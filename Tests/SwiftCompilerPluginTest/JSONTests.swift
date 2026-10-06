@@ -140,9 +140,27 @@ final class JSONTests: XCTestCase {
   }
 
   func testStringSurrogatePairDecoding() {
-    // FIXME: Escaped surrogate pairs are not supported.
-    // Currently parsed as "invalid", but this should be valid '𐐷' (U+10437) character
-    assertInvalidStrng(#"\uD801\uDC37"#)
+    // Valid '𐐷' (U+10437) character
+    assertRoundTrip(
+      of: "𐐷",
+      expectedJSON: #""𐐷""#
+    )
+
+    // Decode \uD801\uDC37 directly
+    do {
+      var json = #""\uD801\uDC37""#
+      let decoded = try json.withUTF8 { try JSON.decode(String.self, from: $0) }
+      XCTAssertEqual(decoded, "𐐷")
+    } catch {
+      XCTFail("Decoding valid surrogate pair failed")
+    }
+
+    // Invalid surrogate pairs
+    assertInvalidStrng(#""\uD801""#)
+    assertInvalidStrng(#""\uDC37""#)
+    assertInvalidStrng(#""\uD801\uD801""#)
+    assertInvalidStrng(#""\uD801\u0000""#)
+    assertInvalidStrng(#""\uD801foo""#)
   }
 
   func testTypeCoercion() {
