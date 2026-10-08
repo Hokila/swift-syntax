@@ -1,0 +1,4165 @@
+{
+  "metadata": {
+    "date": "2026-10-08T14:12:44.534133+08:00",
+    "base": "0a52cc4afa724ba5fdbac7b1359be05f673e4792",
+    "head": "d000dff207acdba2f83203bcec97daeb8cb9d91d",
+    "candidate_sources_sha256": {
+      "Sources/SwiftCompilerPluginMessageHandling/JSON/JSON.swift": "aa5d4065788186339394798b79cfa2d2f0930d95b7c8316638e51628d67b7ca8",
+      "Sources/SwiftCompilerPluginMessageHandling/JSON/JSONDecoding.swift": "b27741e7c603ec74102653a3fbad81be50007769b96587055b56504135f50b26",
+      "Sources/SwiftCompilerPluginMessageHandling/JSON/JSONEncoding.swift": "15703062c0f47ce2b8fa1f69bcb5e3ce3805a21f17b32db3e836816457a46e41",
+      "Sources/SwiftCompilerPluginMessageHandling/JSON/CodingUtilities.swift": "3a6ea2ff5c5b8f553cdfec3a8aae3a32d0652aec59e61fad122d782a10425bf3",
+      "Sources/SwiftCompilerPluginMessageHandling/PluginMessages.swift": "622674dce4d94f14fe09544497723e839f9ac9b43126a34c808054e77bf25fb7"
+    },
+    "candidate_build_fingerprint": "3bc8845a68718c5ec9102afabaa0b95d506fc23ec82392405036500bf4100c3d",
+    "swift": "Apple Swift version 6.4 (swift-6.4-RELEASE)\nTarget: arm64-apple-macosx26.0",
+    "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+    "cpu": "Apple M3",
+    "memory_bytes": 17179869184,
+    "architecture": "arm64",
+    "flags": "-O -whole-module-optimization -swift-version 5",
+    "rounds": 9,
+    "baseline_target_seconds": 0.15
+  },
+  "plan": [
+    {
+      "iterations": 879330,
+      "name": "string/ascii/64"
+    },
+    {
+      "name": "string/cjk/64",
+      "iterations": 788097
+    },
+    {
+      "name": "string/emoji/64",
+      "iterations": 782055
+    },
+    {
+      "iterations": 479565,
+      "name": "string/mixed/64"
+    },
+    {
+      "name": "string/sparse-cjk/64",
+      "iterations": 897945
+    },
+    {
+      "name": "string/ascii/4096",
+      "iterations": 68966
+    },
+    {
+      "iterations": 34021,
+      "name": "string/cjk/4096"
+    },
+    {
+      "name": "string/emoji/4096",
+      "iterations": 32135
+    },
+    {
+      "name": "string/mixed/4096",
+      "iterations": 14513
+    },
+    {
+      "name": "string/sparse-cjk/4096",
+      "iterations": 47588
+    },
+    {
+      "name": "string/ascii/65536",
+      "iterations": 4546
+    },
+    {
+      "name": "string/cjk/65536",
+      "iterations": 2191
+    },
+    {
+      "name": "string/emoji/65536",
+      "iterations": 2056
+    },
+    {
+      "name": "string/mixed/65536",
+      "iterations": 938
+    },
+    {
+      "name": "string/sparse-cjk/65536",
+      "iterations": 3092
+    },
+    {
+      "name": "string/mixed-no-escapes/4096",
+      "iterations": 35361
+    },
+    {
+      "name": "string/unicode-escapes/4096",
+      "iterations": 4994
+    },
+    {
+      "name": "array/ascii/128x64",
+      "iterations": 5838
+    },
+    {
+      "name": "array/cjk/128x64",
+      "iterations": 5287
+    },
+    {
+      "name": "array/emoji/128x64",
+      "iterations": 5343
+    },
+    {
+      "name": "array/mixed/128x64",
+      "iterations": 3626
+    },
+    {
+      "name": "ignored/ascii/65536",
+      "iterations": 4843
+    },
+    {
+      "name": "ignored/cjk/65536",
+      "iterations": 5025
+    },
+    {
+      "name": "request/ascii/4096",
+      "iterations": 16089
+    },
+    {
+      "name": "response/ascii/4096",
+      "iterations": 20838
+    },
+    {
+      "name": "request/mixed/4096",
+      "iterations": 9774
+    },
+    {
+      "name": "response/mixed/4096",
+      "iterations": 10986
+    },
+    {
+      "name": "request/ascii/65536",
+      "iterations": 1528
+    },
+    {
+      "name": "response/ascii/65536",
+      "iterations": 1530
+    },
+    {
+      "name": "request/mixed/65536",
+      "iterations": 740
+    },
+    {
+      "name": "response/mixed/65536",
+      "iterations": 766
+    }
+  ],
+  "samples": [
+    {
+      "round": 1,
+      "variant": "base",
+      "measurements": [
+        {
+          "iterations": 879330,
+          "checksum": 79139700,
+          "elapsedNS": 144524875,
+          "name": "string/ascii/64",
+          "bytes": 92
+        },
+        {
+          "iterations": 788097,
+          "checksum": 52014402,
+          "elapsedNS": 148029541,
+          "name": "string/cjk/64",
+          "bytes": 68
+        },
+        {
+          "iterations": 782055,
+          "checksum": 50051520,
+          "elapsedNS": 148093792,
+          "name": "string/emoji/64",
+          "bytes": 66
+        },
+        {
+          "iterations": 479565,
+          "checksum": 32610420,
+          "elapsedNS": 147813417,
+          "name": "string/mixed/64",
+          "bytes": 74
+        },
+        {
+          "iterations": 897945,
+          "checksum": 57468480,
+          "elapsedNS": 150140625,
+          "name": "string/sparse-cjk/64",
+          "bytes": 66
+        },
+        {
+          "checksum": 283450260,
+          "elapsedNS": 148562125,
+          "name": "string/ascii/4096",
+          "iterations": 68966,
+          "bytes": 4112
+        },
+        {
+          "checksum": 140336625,
+          "elapsedNS": 148390667,
+          "name": "string/cjk/4096",
+          "iterations": 34021,
+          "bytes": 4127
+        },
+        {
+          "checksum": 131624960,
+          "elapsedNS": 146572917,
+          "name": "string/emoji/4096",
+          "iterations": 32135,
+          "bytes": 4098
+        },
+        {
+          "checksum": 59706482,
+          "elapsedNS": 149817625,
+          "name": "string/mixed/4096",
+          "iterations": 14513,
+          "bytes": 4358
+        },
+        {
+          "checksum": 194920448,
+          "elapsedNS": 147675500,
+          "name": "string/sparse-cjk/4096",
+          "iterations": 47588,
+          "bytes": 4098
+        },
+        {
+          "checksum": 297990300,
+          "elapsedNS": 147387250,
+          "name": "string/ascii/65536",
+          "iterations": 4546,
+          "bytes": 65552
+        },
+        {
+          "checksum": 143593758,
+          "elapsedNS": 148227958,
+          "name": "string/cjk/65536",
+          "iterations": 2191,
+          "bytes": 65540
+        },
+        {
+          "checksum": 134742016,
+          "elapsedNS": 146668333,
+          "name": "string/emoji/65536",
+          "iterations": 2056,
+          "bytes": 65538
+        },
+        {
+          "checksum": 61487776,
+          "elapsedNS": 151555792,
+          "name": "string/mixed/65536",
+          "iterations": 938,
+          "bytes": 69410
+        },
+        {
+          "checksum": 202637312,
+          "elapsedNS": 147527750,
+          "name": "string/sparse-cjk/65536",
+          "iterations": 3092,
+          "bytes": 65538
+        },
+        {
+          "checksum": 144838656,
+          "elapsedNS": 150110792,
+          "name": "string/mixed-no-escapes/4096",
+          "iterations": 35361,
+          "bytes": 4098
+        },
+        {
+          "checksum": 10247688,
+          "elapsedNS": 146110917,
+          "name": "string/unicode-escapes/4096",
+          "iterations": 4994,
+          "bytes": 4106
+        },
+        {
+          "checksum": 69600636,
+          "elapsedNS": 149054334,
+          "name": "array/ascii/128x64",
+          "iterations": 5838,
+          "bytes": 12307
+        },
+        {
+          "checksum": 46789950,
+          "elapsedNS": 152108625,
+          "name": "array/cjk/128x64",
+          "iterations": 5287,
+          "bytes": 9235
+        },
+        {
+          "checksum": 45917742,
+          "elapsedNS": 154576333,
+          "name": "array/emoji/128x64",
+          "iterations": 5343,
+          "bytes": 8979
+        },
+        {
+          "checksum": 33018356,
+          "elapsedNS": 156617250,
+          "name": "array/mixed/128x64",
+          "iterations": 3626,
+          "bytes": 10003
+        },
+        {
+          "checksum": 4843,
+          "elapsedNS": 146495167,
+          "name": "ignored/ascii/65536",
+          "iterations": 4843,
+          "bytes": 65564
+        },
+        {
+          "checksum": 5025,
+          "elapsedNS": 153914041,
+          "name": "ignored/cjk/65536",
+          "iterations": 5025,
+          "bytes": 65552
+        },
+        {
+          "checksum": 66334947,
+          "elapsedNS": 149726167,
+          "name": "request/ascii/4096",
+          "iterations": 16089,
+          "bytes": 4556
+        },
+        {
+          "checksum": 85915074,
+          "elapsedNS": 150015167,
+          "name": "response/ascii/4096",
+          "iterations": 20838,
+          "bytes": 4316
+        },
+        {
+          "checksum": 40366620,
+          "elapsedNS": 154228167,
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "bytes": 4784
+        },
+        {
+          "checksum": 45372180,
+          "elapsedNS": 149122791,
+          "name": "response/mixed/4096",
+          "iterations": 10986,
+          "bytes": 4544
+        },
+        {
+          "checksum": 100183320,
+          "elapsedNS": 153167375,
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "bytes": 67980
+        },
+        {
+          "checksum": 100314450,
+          "elapsedNS": 148217833,
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "bytes": 67740
+        },
+        {
+          "checksum": 48510700,
+          "elapsedNS": 148930125,
+          "name": "request/mixed/65536",
+          "iterations": 740,
+          "bytes": 71474
+        },
+        {
+          "checksum": 50215130,
+          "elapsedNS": 148462375,
+          "name": "response/mixed/65536",
+          "iterations": 766,
+          "bytes": 71234
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "variant": "pr",
+      "measurements": [
+        {
+          "name": "string/ascii/64",
+          "bytes": 92,
+          "iterations": 879330,
+          "checksum": 79139700,
+          "elapsedNS": 165906792
+        },
+        {
+          "name": "string/cjk/64",
+          "bytes": 68,
+          "iterations": 788097,
+          "checksum": 52014402,
+          "elapsedNS": 148846000
+        },
+        {
+          "name": "string/emoji/64",
+          "bytes": 66,
+          "iterations": 782055,
+          "checksum": 50051520,
+          "elapsedNS": 151561125
+        },
+        {
+          "name": "string/mixed/64",
+          "bytes": 74,
+          "iterations": 479565,
+          "checksum": 32610420,
+          "elapsedNS": 129454833
+        },
+        {
+          "name": "string/sparse-cjk/64",
+          "bytes": 66,
+          "iterations": 897945,
+          "checksum": 57468480,
+          "elapsedNS": 151204000
+        },
+        {
+          "name": "string/ascii/4096",
+          "bytes": 4112,
+          "iterations": 68966,
+          "checksum": 283450260,
+          "elapsedNS": 61994792
+        },
+        {
+          "bytes": 4127,
+          "name": "string/cjk/4096",
+          "iterations": 34021,
+          "elapsedNS": 115549792,
+          "checksum": 140336625
+        },
+        {
+          "bytes": 4098,
+          "name": "string/emoji/4096",
+          "iterations": 32135,
+          "elapsedNS": 130546917,
+          "checksum": 131624960
+        },
+        {
+          "bytes": 4358,
+          "name": "string/mixed/4096",
+          "iterations": 14513,
+          "elapsedNS": 115632708,
+          "checksum": 59706482
+        },
+        {
+          "bytes": 4098,
+          "name": "string/sparse-cjk/4096",
+          "iterations": 47588,
+          "elapsedNS": 94978458,
+          "checksum": 194920448
+        },
+        {
+          "bytes": 65552,
+          "name": "string/ascii/65536",
+          "iterations": 4546,
+          "elapsedNS": 57951667,
+          "checksum": 297990300
+        },
+        {
+          "bytes": 65540,
+          "name": "string/cjk/65536",
+          "iterations": 2191,
+          "elapsedNS": 114128083,
+          "checksum": 143593758
+        },
+        {
+          "bytes": 65538,
+          "name": "string/emoji/65536",
+          "iterations": 2056,
+          "elapsedNS": 130371250,
+          "checksum": 134742016
+        },
+        {
+          "bytes": 69410,
+          "name": "string/mixed/65536",
+          "iterations": 938,
+          "elapsedNS": 117729792,
+          "checksum": 61487776
+        },
+        {
+          "bytes": 65538,
+          "name": "string/sparse-cjk/65536",
+          "iterations": 3092,
+          "elapsedNS": 112488708,
+          "checksum": 202637312
+        },
+        {
+          "bytes": 4098,
+          "name": "string/mixed-no-escapes/4096",
+          "iterations": 35361,
+          "elapsedNS": 146517917,
+          "checksum": 144838656
+        },
+        {
+          "bytes": 4106,
+          "name": "string/unicode-escapes/4096",
+          "iterations": 4994,
+          "elapsedNS": 56227208,
+          "checksum": 10247688
+        },
+        {
+          "bytes": 12307,
+          "name": "array/ascii/128x64",
+          "iterations": 5838,
+          "elapsedNS": 135584166,
+          "checksum": 69600636
+        },
+        {
+          "bytes": 9235,
+          "name": "array/cjk/128x64",
+          "iterations": 5287,
+          "elapsedNS": 142156417,
+          "checksum": 46789950
+        },
+        {
+          "bytes": 8979,
+          "name": "array/emoji/128x64",
+          "iterations": 5343,
+          "elapsedNS": 151410166,
+          "checksum": 45917742
+        },
+        {
+          "bytes": 10003,
+          "name": "array/mixed/128x64",
+          "iterations": 3626,
+          "elapsedNS": 136402708,
+          "checksum": 33018356
+        },
+        {
+          "bytes": 65564,
+          "name": "ignored/ascii/65536",
+          "iterations": 4843,
+          "elapsedNS": 58543667,
+          "checksum": 4843
+        },
+        {
+          "bytes": 65552,
+          "name": "ignored/cjk/65536",
+          "iterations": 5025,
+          "elapsedNS": 75786333,
+          "checksum": 5025
+        },
+        {
+          "bytes": 4556,
+          "name": "request/ascii/4096",
+          "iterations": 16089,
+          "elapsedNS": 134334458,
+          "checksum": 66334947
+        },
+        {
+          "bytes": 4316,
+          "name": "response/ascii/4096",
+          "iterations": 20838,
+          "elapsedNS": 129217375,
+          "checksum": 85915074
+        },
+        {
+          "bytes": 4784,
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "elapsedNS": 122089000,
+          "checksum": 40366620
+        },
+        {
+          "bytes": 4544,
+          "name": "response/mixed/4096",
+          "iterations": 10986,
+          "elapsedNS": 113192500,
+          "checksum": 45372180
+        },
+        {
+          "bytes": 67980,
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "elapsedNS": 122788792,
+          "checksum": 100183320
+        },
+        {
+          "bytes": 67740,
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "elapsedNS": 120509041,
+          "checksum": 100314450
+        },
+        {
+          "bytes": 71474,
+          "name": "request/mixed/65536",
+          "iterations": 740,
+          "elapsedNS": 108585542,
+          "checksum": 48510700
+        },
+        {
+          "bytes": 71234,
+          "name": "response/mixed/65536",
+          "iterations": 766,
+          "elapsedNS": 112258209,
+          "checksum": 50215130
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "variant": "pr",
+      "measurements": [
+        {
+          "name": "response/mixed/65536",
+          "bytes": 71234,
+          "iterations": 766,
+          "elapsedNS": 112060167,
+          "checksum": 50215130
+        },
+        {
+          "bytes": 71474,
+          "elapsedNS": 111416208,
+          "checksum": 48510700,
+          "name": "request/mixed/65536",
+          "iterations": 740
+        },
+        {
+          "elapsedNS": 122049750,
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "bytes": 67740,
+          "checksum": 100314450
+        },
+        {
+          "checksum": 100183320,
+          "iterations": 1528,
+          "bytes": 67980,
+          "elapsedNS": 123289208,
+          "name": "request/ascii/65536"
+        },
+        {
+          "name": "response/mixed/4096",
+          "elapsedNS": 114224292,
+          "checksum": 45372180,
+          "iterations": 10986,
+          "bytes": 4544
+        },
+        {
+          "bytes": 4784,
+          "iterations": 9774,
+          "checksum": 40366620,
+          "name": "request/mixed/4096",
+          "elapsedNS": 122436708
+        },
+        {
+          "name": "response/ascii/4096",
+          "bytes": 4316,
+          "elapsedNS": 131588208,
+          "checksum": 85915074,
+          "iterations": 20838
+        },
+        {
+          "name": "request/ascii/4096",
+          "bytes": 4556,
+          "elapsedNS": 136343416,
+          "checksum": 66334947,
+          "iterations": 16089
+        },
+        {
+          "name": "ignored/cjk/65536",
+          "bytes": 65552,
+          "elapsedNS": 76422709,
+          "checksum": 5025,
+          "iterations": 5025
+        },
+        {
+          "name": "ignored/ascii/65536",
+          "bytes": 65564,
+          "elapsedNS": 57646584,
+          "checksum": 4843,
+          "iterations": 4843
+        },
+        {
+          "name": "array/mixed/128x64",
+          "bytes": 10003,
+          "elapsedNS": 137831208,
+          "checksum": 33018356,
+          "iterations": 3626
+        },
+        {
+          "name": "array/emoji/128x64",
+          "bytes": 8979,
+          "elapsedNS": 150299167,
+          "checksum": 45917742,
+          "iterations": 5343
+        },
+        {
+          "name": "array/cjk/128x64",
+          "bytes": 9235,
+          "elapsedNS": 139466958,
+          "checksum": 46789950,
+          "iterations": 5287
+        },
+        {
+          "name": "array/ascii/128x64",
+          "bytes": 12307,
+          "elapsedNS": 137363666,
+          "checksum": 69600636,
+          "iterations": 5838
+        },
+        {
+          "name": "string/unicode-escapes/4096",
+          "bytes": 4106,
+          "elapsedNS": 54474834,
+          "checksum": 10247688,
+          "iterations": 4994
+        },
+        {
+          "name": "string/mixed-no-escapes/4096",
+          "bytes": 4098,
+          "elapsedNS": 146717292,
+          "checksum": 144838656,
+          "iterations": 35361
+        },
+        {
+          "name": "string/sparse-cjk/65536",
+          "bytes": 65538,
+          "elapsedNS": 106909583,
+          "checksum": 202637312,
+          "iterations": 3092
+        },
+        {
+          "name": "string/mixed/65536",
+          "bytes": 69410,
+          "elapsedNS": 118083042,
+          "checksum": 61487776,
+          "iterations": 938
+        },
+        {
+          "name": "string/emoji/65536",
+          "bytes": 65538,
+          "elapsedNS": 131184250,
+          "checksum": 134742016,
+          "iterations": 2056
+        },
+        {
+          "name": "string/cjk/65536",
+          "bytes": 65540,
+          "elapsedNS": 113369125,
+          "checksum": 143593758,
+          "iterations": 2191
+        },
+        {
+          "name": "string/ascii/65536",
+          "bytes": 65552,
+          "elapsedNS": 56481375,
+          "checksum": 297990300,
+          "iterations": 4546
+        },
+        {
+          "name": "string/sparse-cjk/4096",
+          "bytes": 4098,
+          "elapsedNS": 95108042,
+          "checksum": 194920448,
+          "iterations": 47588
+        },
+        {
+          "name": "string/mixed/4096",
+          "bytes": 4358,
+          "elapsedNS": 115522500,
+          "checksum": 59706482,
+          "iterations": 14513
+        },
+        {
+          "name": "string/emoji/4096",
+          "bytes": 4098,
+          "elapsedNS": 131896292,
+          "checksum": 131624960,
+          "iterations": 32135
+        },
+        {
+          "name": "string/cjk/4096",
+          "bytes": 4127,
+          "elapsedNS": 115007666,
+          "checksum": 140336625,
+          "iterations": 34021
+        },
+        {
+          "name": "string/ascii/4096",
+          "bytes": 4112,
+          "elapsedNS": 62212084,
+          "checksum": 283450260,
+          "iterations": 68966
+        },
+        {
+          "name": "string/sparse-cjk/64",
+          "bytes": 66,
+          "elapsedNS": 151165417,
+          "checksum": 57468480,
+          "iterations": 897945
+        },
+        {
+          "name": "string/mixed/64",
+          "bytes": 74,
+          "elapsedNS": 127444167,
+          "checksum": 32610420,
+          "iterations": 479565
+        },
+        {
+          "name": "string/emoji/64",
+          "bytes": 66,
+          "elapsedNS": 147997709,
+          "checksum": 50051520,
+          "iterations": 782055
+        },
+        {
+          "name": "string/cjk/64",
+          "bytes": 68,
+          "elapsedNS": 142404417,
+          "checksum": 52014402,
+          "iterations": 788097
+        },
+        {
+          "name": "string/ascii/64",
+          "bytes": 92,
+          "elapsedNS": 144223417,
+          "checksum": 79139700,
+          "iterations": 879330
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "variant": "base",
+      "measurements": [
+        {
+          "bytes": 71234,
+          "iterations": 766,
+          "name": "response/mixed/65536",
+          "elapsedNS": 150627584,
+          "checksum": 50215130
+        },
+        {
+          "bytes": 71474,
+          "iterations": 740,
+          "name": "request/mixed/65536",
+          "elapsedNS": 151247625,
+          "checksum": 48510700
+        },
+        {
+          "bytes": 67740,
+          "iterations": 1530,
+          "name": "response/ascii/65536",
+          "elapsedNS": 146197250,
+          "checksum": 100314450
+        },
+        {
+          "bytes": 67980,
+          "iterations": 1528,
+          "name": "request/ascii/65536",
+          "elapsedNS": 149825416,
+          "checksum": 100183320
+        },
+        {
+          "bytes": 4544,
+          "iterations": 10986,
+          "name": "response/mixed/4096",
+          "elapsedNS": 146990042,
+          "checksum": 45372180
+        },
+        {
+          "iterations": 9774,
+          "name": "request/mixed/4096",
+          "checksum": 40366620,
+          "bytes": 4784,
+          "elapsedNS": 152894375
+        },
+        {
+          "iterations": 20838,
+          "name": "response/ascii/4096",
+          "checksum": 85915074,
+          "bytes": 4316,
+          "elapsedNS": 148565208
+        },
+        {
+          "iterations": 16089,
+          "name": "request/ascii/4096",
+          "checksum": 66334947,
+          "bytes": 4556,
+          "elapsedNS": 150589750
+        },
+        {
+          "iterations": 5025,
+          "name": "ignored/cjk/65536",
+          "checksum": 5025,
+          "bytes": 65552,
+          "elapsedNS": 154442500
+        },
+        {
+          "iterations": 4843,
+          "name": "ignored/ascii/65536",
+          "checksum": 4843,
+          "bytes": 65564,
+          "elapsedNS": 146581083
+        },
+        {
+          "iterations": 3626,
+          "name": "array/mixed/128x64",
+          "checksum": 33018356,
+          "bytes": 10003,
+          "elapsedNS": 156215458
+        },
+        {
+          "iterations": 5343,
+          "name": "array/emoji/128x64",
+          "checksum": 45917742,
+          "bytes": 8979,
+          "elapsedNS": 155192125
+        },
+        {
+          "iterations": 5287,
+          "name": "array/cjk/128x64",
+          "checksum": 46789950,
+          "bytes": 9235,
+          "elapsedNS": 151613292
+        },
+        {
+          "iterations": 5838,
+          "name": "array/ascii/128x64",
+          "checksum": 69600636,
+          "bytes": 12307,
+          "elapsedNS": 146847000
+        },
+        {
+          "iterations": 4994,
+          "name": "string/unicode-escapes/4096",
+          "checksum": 10247688,
+          "bytes": 4106,
+          "elapsedNS": 146130333
+        },
+        {
+          "iterations": 35361,
+          "name": "string/mixed-no-escapes/4096",
+          "checksum": 144838656,
+          "bytes": 4098,
+          "elapsedNS": 151567292
+        },
+        {
+          "iterations": 3092,
+          "name": "string/sparse-cjk/65536",
+          "checksum": 202637312,
+          "bytes": 65538,
+          "elapsedNS": 146115541
+        },
+        {
+          "iterations": 938,
+          "name": "string/mixed/65536",
+          "checksum": 61487776,
+          "bytes": 69410,
+          "elapsedNS": 154727875
+        },
+        {
+          "iterations": 2056,
+          "name": "string/emoji/65536",
+          "checksum": 134742016,
+          "bytes": 65538,
+          "elapsedNS": 148459084
+        },
+        {
+          "iterations": 2191,
+          "name": "string/cjk/65536",
+          "checksum": 143593758,
+          "bytes": 65540,
+          "elapsedNS": 148268750
+        },
+        {
+          "iterations": 4546,
+          "name": "string/ascii/65536",
+          "checksum": 297990300,
+          "bytes": 65552,
+          "elapsedNS": 147991750
+        },
+        {
+          "iterations": 47588,
+          "name": "string/sparse-cjk/4096",
+          "checksum": 194920448,
+          "bytes": 4098,
+          "elapsedNS": 148449042
+        },
+        {
+          "iterations": 14513,
+          "name": "string/mixed/4096",
+          "checksum": 59706482,
+          "bytes": 4358,
+          "elapsedNS": 149797000
+        },
+        {
+          "iterations": 32135,
+          "name": "string/emoji/4096",
+          "checksum": 131624960,
+          "bytes": 4098,
+          "elapsedNS": 148179875
+        },
+        {
+          "iterations": 34021,
+          "name": "string/cjk/4096",
+          "checksum": 140336625,
+          "bytes": 4127,
+          "elapsedNS": 148382084
+        },
+        {
+          "iterations": 68966,
+          "name": "string/ascii/4096",
+          "checksum": 283450260,
+          "bytes": 4112,
+          "elapsedNS": 148494042
+        },
+        {
+          "iterations": 897945,
+          "name": "string/sparse-cjk/64",
+          "checksum": 57468480,
+          "bytes": 66,
+          "elapsedNS": 147792292
+        },
+        {
+          "iterations": 479565,
+          "name": "string/mixed/64",
+          "checksum": 32610420,
+          "bytes": 74,
+          "elapsedNS": 147533084
+        },
+        {
+          "iterations": 782055,
+          "name": "string/emoji/64",
+          "checksum": 50051520,
+          "bytes": 66,
+          "elapsedNS": 148311125
+        },
+        {
+          "iterations": 788097,
+          "name": "string/cjk/64",
+          "checksum": 52014402,
+          "bytes": 68,
+          "elapsedNS": 147813667
+        },
+        {
+          "iterations": 879330,
+          "name": "string/ascii/64",
+          "checksum": 79139700,
+          "bytes": 92,
+          "elapsedNS": 144244584
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "variant": "base",
+      "measurements": [
+        {
+          "bytes": 92,
+          "checksum": 79139700,
+          "elapsedNS": 144183792,
+          "iterations": 879330,
+          "name": "string/ascii/64"
+        },
+        {
+          "bytes": 68,
+          "checksum": 52014402,
+          "elapsedNS": 147718083,
+          "iterations": 788097,
+          "name": "string/cjk/64"
+        },
+        {
+          "bytes": 66,
+          "checksum": 50051520,
+          "elapsedNS": 149681250,
+          "iterations": 782055,
+          "name": "string/emoji/64"
+        },
+        {
+          "bytes": 74,
+          "checksum": 32610420,
+          "elapsedNS": 149187542,
+          "iterations": 479565,
+          "name": "string/mixed/64"
+        },
+        {
+          "bytes": 66,
+          "checksum": 57468480,
+          "elapsedNS": 149457375,
+          "iterations": 897945,
+          "name": "string/sparse-cjk/64"
+        },
+        {
+          "checksum": 283450260,
+          "iterations": 68966,
+          "bytes": 4112,
+          "name": "string/ascii/4096",
+          "elapsedNS": 148345667
+        },
+        {
+          "checksum": 140336625,
+          "iterations": 34021,
+          "bytes": 4127,
+          "name": "string/cjk/4096",
+          "elapsedNS": 148228125
+        },
+        {
+          "checksum": 131624960,
+          "iterations": 32135,
+          "bytes": 4098,
+          "name": "string/emoji/4096",
+          "elapsedNS": 147662042
+        },
+        {
+          "checksum": 59706482,
+          "iterations": 14513,
+          "bytes": 4358,
+          "name": "string/mixed/4096",
+          "elapsedNS": 150466084
+        },
+        {
+          "checksum": 194920448,
+          "iterations": 47588,
+          "bytes": 4098,
+          "name": "string/sparse-cjk/4096",
+          "elapsedNS": 147763083
+        },
+        {
+          "checksum": 297990300,
+          "iterations": 4546,
+          "bytes": 65552,
+          "name": "string/ascii/65536",
+          "elapsedNS": 147438000
+        },
+        {
+          "checksum": 143593758,
+          "iterations": 2191,
+          "bytes": 65540,
+          "name": "string/cjk/65536",
+          "elapsedNS": 146587792
+        },
+        {
+          "checksum": 134742016,
+          "iterations": 2056,
+          "bytes": 65538,
+          "name": "string/emoji/65536",
+          "elapsedNS": 146808166
+        },
+        {
+          "checksum": 61487776,
+          "iterations": 938,
+          "bytes": 69410,
+          "name": "string/mixed/65536",
+          "elapsedNS": 151800542
+        },
+        {
+          "checksum": 202637312,
+          "iterations": 3092,
+          "bytes": 65538,
+          "name": "string/sparse-cjk/65536",
+          "elapsedNS": 147611458
+        },
+        {
+          "checksum": 144838656,
+          "iterations": 35361,
+          "bytes": 4098,
+          "name": "string/mixed-no-escapes/4096",
+          "elapsedNS": 153671291
+        },
+        {
+          "checksum": 10247688,
+          "iterations": 4994,
+          "bytes": 4106,
+          "name": "string/unicode-escapes/4096",
+          "elapsedNS": 147464334
+        },
+        {
+          "checksum": 69600636,
+          "iterations": 5838,
+          "bytes": 12307,
+          "name": "array/ascii/128x64",
+          "elapsedNS": 148914625
+        },
+        {
+          "checksum": 46789950,
+          "iterations": 5287,
+          "bytes": 9235,
+          "name": "array/cjk/128x64",
+          "elapsedNS": 152128875
+        },
+        {
+          "checksum": 45917742,
+          "iterations": 5343,
+          "bytes": 8979,
+          "name": "array/emoji/128x64",
+          "elapsedNS": 155987250
+        },
+        {
+          "checksum": 33018356,
+          "iterations": 3626,
+          "bytes": 10003,
+          "name": "array/mixed/128x64",
+          "elapsedNS": 155435125
+        },
+        {
+          "checksum": 4843,
+          "iterations": 4843,
+          "bytes": 65564,
+          "name": "ignored/ascii/65536",
+          "elapsedNS": 147785916
+        },
+        {
+          "checksum": 5025,
+          "iterations": 5025,
+          "bytes": 65552,
+          "name": "ignored/cjk/65536",
+          "elapsedNS": 153428375
+        },
+        {
+          "checksum": 66334947,
+          "iterations": 16089,
+          "bytes": 4556,
+          "name": "request/ascii/4096",
+          "elapsedNS": 149320083
+        },
+        {
+          "checksum": 85915074,
+          "iterations": 20838,
+          "bytes": 4316,
+          "name": "response/ascii/4096",
+          "elapsedNS": 149911458
+        },
+        {
+          "checksum": 40366620,
+          "iterations": 9774,
+          "bytes": 4784,
+          "name": "request/mixed/4096",
+          "elapsedNS": 153579833
+        },
+        {
+          "checksum": 45372180,
+          "iterations": 10986,
+          "bytes": 4544,
+          "name": "response/mixed/4096",
+          "elapsedNS": 149584209
+        },
+        {
+          "checksum": 100183320,
+          "iterations": 1528,
+          "bytes": 67980,
+          "name": "request/ascii/65536",
+          "elapsedNS": 149564083
+        },
+        {
+          "checksum": 100314450,
+          "iterations": 1530,
+          "bytes": 67740,
+          "name": "response/ascii/65536",
+          "elapsedNS": 148483833
+        },
+        {
+          "checksum": 48510700,
+          "iterations": 740,
+          "bytes": 71474,
+          "name": "request/mixed/65536",
+          "elapsedNS": 147482458
+        },
+        {
+          "checksum": 50215130,
+          "iterations": 766,
+          "bytes": 71234,
+          "name": "response/mixed/65536",
+          "elapsedNS": 152035833
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "variant": "pr",
+      "measurements": [
+        {
+          "bytes": 92,
+          "iterations": 879330,
+          "checksum": 79139700,
+          "name": "string/ascii/64",
+          "elapsedNS": 257632375
+        },
+        {
+          "bytes": 68,
+          "iterations": 788097,
+          "checksum": 52014402,
+          "name": "string/cjk/64",
+          "elapsedNS": 143981541
+        },
+        {
+          "bytes": 66,
+          "iterations": 782055,
+          "checksum": 50051520,
+          "name": "string/emoji/64",
+          "elapsedNS": 148544750
+        },
+        {
+          "bytes": 74,
+          "iterations": 479565,
+          "checksum": 32610420,
+          "name": "string/mixed/64",
+          "elapsedNS": 131038791
+        },
+        {
+          "bytes": 66,
+          "iterations": 897945,
+          "checksum": 57468480,
+          "name": "string/sparse-cjk/64",
+          "elapsedNS": 151640541
+        },
+        {
+          "bytes": 4112,
+          "iterations": 68966,
+          "checksum": 283450260,
+          "name": "string/ascii/4096",
+          "elapsedNS": 66000666
+        },
+        {
+          "checksum": 140336625,
+          "elapsedNS": 116575584,
+          "bytes": 4127,
+          "iterations": 34021,
+          "name": "string/cjk/4096"
+        },
+        {
+          "checksum": 131624960,
+          "elapsedNS": 131723250,
+          "bytes": 4098,
+          "iterations": 32135,
+          "name": "string/emoji/4096"
+        },
+        {
+          "checksum": 59706482,
+          "elapsedNS": 117560875,
+          "bytes": 4358,
+          "iterations": 14513,
+          "name": "string/mixed/4096"
+        },
+        {
+          "checksum": 194920448,
+          "elapsedNS": 96966959,
+          "bytes": 4098,
+          "iterations": 47588,
+          "name": "string/sparse-cjk/4096"
+        },
+        {
+          "checksum": 297990300,
+          "elapsedNS": 57740333,
+          "bytes": 65552,
+          "iterations": 4546,
+          "name": "string/ascii/65536"
+        },
+        {
+          "checksum": 143593758,
+          "elapsedNS": 113991375,
+          "bytes": 65540,
+          "iterations": 2191,
+          "name": "string/cjk/65536"
+        },
+        {
+          "checksum": 134742016,
+          "elapsedNS": 130651625,
+          "bytes": 65538,
+          "iterations": 2056,
+          "name": "string/emoji/65536"
+        },
+        {
+          "checksum": 61487776,
+          "elapsedNS": 118540500,
+          "bytes": 69410,
+          "iterations": 938,
+          "name": "string/mixed/65536"
+        },
+        {
+          "checksum": 202637312,
+          "elapsedNS": 112702792,
+          "bytes": 65538,
+          "iterations": 3092,
+          "name": "string/sparse-cjk/65536"
+        },
+        {
+          "checksum": 144838656,
+          "elapsedNS": 146323083,
+          "bytes": 4098,
+          "iterations": 35361,
+          "name": "string/mixed-no-escapes/4096"
+        },
+        {
+          "checksum": 10247688,
+          "elapsedNS": 55140333,
+          "bytes": 4106,
+          "iterations": 4994,
+          "name": "string/unicode-escapes/4096"
+        },
+        {
+          "checksum": 69600636,
+          "elapsedNS": 136748917,
+          "bytes": 12307,
+          "iterations": 5838,
+          "name": "array/ascii/128x64"
+        },
+        {
+          "checksum": 46789950,
+          "elapsedNS": 141198625,
+          "bytes": 9235,
+          "iterations": 5287,
+          "name": "array/cjk/128x64"
+        },
+        {
+          "checksum": 45917742,
+          "elapsedNS": 152075917,
+          "bytes": 8979,
+          "iterations": 5343,
+          "name": "array/emoji/128x64"
+        },
+        {
+          "checksum": 33018356,
+          "elapsedNS": 135516625,
+          "bytes": 10003,
+          "iterations": 3626,
+          "name": "array/mixed/128x64"
+        },
+        {
+          "checksum": 4843,
+          "elapsedNS": 51567708,
+          "bytes": 65564,
+          "iterations": 4843,
+          "name": "ignored/ascii/65536"
+        },
+        {
+          "checksum": 5025,
+          "elapsedNS": 75491917,
+          "bytes": 65552,
+          "iterations": 5025,
+          "name": "ignored/cjk/65536"
+        },
+        {
+          "checksum": 66334947,
+          "elapsedNS": 135316291,
+          "bytes": 4556,
+          "iterations": 16089,
+          "name": "request/ascii/4096"
+        },
+        {
+          "checksum": 85915074,
+          "elapsedNS": 129701167,
+          "bytes": 4316,
+          "iterations": 20838,
+          "name": "response/ascii/4096"
+        },
+        {
+          "checksum": 40366620,
+          "elapsedNS": 120275791,
+          "bytes": 4784,
+          "iterations": 9774,
+          "name": "request/mixed/4096"
+        },
+        {
+          "checksum": 45372180,
+          "elapsedNS": 112428500,
+          "bytes": 4544,
+          "iterations": 10986,
+          "name": "response/mixed/4096"
+        },
+        {
+          "checksum": 100183320,
+          "elapsedNS": 123021166,
+          "bytes": 67980,
+          "iterations": 1528,
+          "name": "request/ascii/65536"
+        },
+        {
+          "checksum": 100314450,
+          "elapsedNS": 116059333,
+          "bytes": 67740,
+          "iterations": 1530,
+          "name": "response/ascii/65536"
+        },
+        {
+          "checksum": 48510700,
+          "elapsedNS": 108671417,
+          "bytes": 71474,
+          "iterations": 740,
+          "name": "request/mixed/65536"
+        },
+        {
+          "checksum": 50215130,
+          "elapsedNS": 110363875,
+          "bytes": 71234,
+          "iterations": 766,
+          "name": "response/mixed/65536"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "variant": "pr",
+      "measurements": [
+        {
+          "checksum": 50215130,
+          "elapsedNS": 111932417,
+          "bytes": 71234,
+          "name": "response/mixed/65536",
+          "iterations": 766
+        },
+        {
+          "checksum": 48510700,
+          "name": "request/mixed/65536",
+          "elapsedNS": 110506875,
+          "bytes": 71474,
+          "iterations": 740
+        },
+        {
+          "iterations": 1530,
+          "name": "response/ascii/65536",
+          "bytes": 67740,
+          "elapsedNS": 124921250,
+          "checksum": 100314450
+        },
+        {
+          "bytes": 67980,
+          "checksum": 100183320,
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "elapsedNS": 123360042
+        },
+        {
+          "name": "response/mixed/4096",
+          "bytes": 4544,
+          "iterations": 10986,
+          "elapsedNS": 112786917,
+          "checksum": 45372180
+        },
+        {
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "elapsedNS": 121574834,
+          "bytes": 4784,
+          "checksum": 40366620
+        },
+        {
+          "bytes": 4316,
+          "elapsedNS": 133318291,
+          "checksum": 85915074,
+          "name": "response/ascii/4096",
+          "iterations": 20838
+        },
+        {
+          "bytes": 4556,
+          "elapsedNS": 142876417,
+          "checksum": 66334947,
+          "name": "request/ascii/4096",
+          "iterations": 16089
+        },
+        {
+          "bytes": 65552,
+          "elapsedNS": 76019959,
+          "checksum": 5025,
+          "name": "ignored/cjk/65536",
+          "iterations": 5025
+        },
+        {
+          "bytes": 65564,
+          "elapsedNS": 75643584,
+          "checksum": 4843,
+          "name": "ignored/ascii/65536",
+          "iterations": 4843
+        },
+        {
+          "bytes": 10003,
+          "elapsedNS": 140994167,
+          "checksum": 33018356,
+          "name": "array/mixed/128x64",
+          "iterations": 3626
+        },
+        {
+          "bytes": 8979,
+          "elapsedNS": 154729958,
+          "checksum": 45917742,
+          "name": "array/emoji/128x64",
+          "iterations": 5343
+        },
+        {
+          "bytes": 9235,
+          "elapsedNS": 144847000,
+          "checksum": 46789950,
+          "name": "array/cjk/128x64",
+          "iterations": 5287
+        },
+        {
+          "bytes": 12307,
+          "elapsedNS": 135074542,
+          "checksum": 69600636,
+          "name": "array/ascii/128x64",
+          "iterations": 5838
+        },
+        {
+          "bytes": 4106,
+          "elapsedNS": 56886208,
+          "checksum": 10247688,
+          "name": "string/unicode-escapes/4096",
+          "iterations": 4994
+        },
+        {
+          "bytes": 4098,
+          "elapsedNS": 147514334,
+          "checksum": 144838656,
+          "name": "string/mixed-no-escapes/4096",
+          "iterations": 35361
+        },
+        {
+          "bytes": 65538,
+          "elapsedNS": 106806709,
+          "checksum": 202637312,
+          "name": "string/sparse-cjk/65536",
+          "iterations": 3092
+        },
+        {
+          "bytes": 69410,
+          "elapsedNS": 118217417,
+          "checksum": 61487776,
+          "name": "string/mixed/65536",
+          "iterations": 938
+        },
+        {
+          "bytes": 65538,
+          "elapsedNS": 131417291,
+          "checksum": 134742016,
+          "name": "string/emoji/65536",
+          "iterations": 2056
+        },
+        {
+          "bytes": 65540,
+          "elapsedNS": 113759041,
+          "checksum": 143593758,
+          "name": "string/cjk/65536",
+          "iterations": 2191
+        },
+        {
+          "bytes": 65552,
+          "elapsedNS": 57748250,
+          "checksum": 297990300,
+          "name": "string/ascii/65536",
+          "iterations": 4546
+        },
+        {
+          "bytes": 4098,
+          "elapsedNS": 95027417,
+          "checksum": 194920448,
+          "name": "string/sparse-cjk/4096",
+          "iterations": 47588
+        },
+        {
+          "bytes": 4358,
+          "elapsedNS": 114636750,
+          "checksum": 59706482,
+          "name": "string/mixed/4096",
+          "iterations": 14513
+        },
+        {
+          "bytes": 4098,
+          "elapsedNS": 131441542,
+          "checksum": 131624960,
+          "name": "string/emoji/4096",
+          "iterations": 32135
+        },
+        {
+          "bytes": 4127,
+          "elapsedNS": 114790083,
+          "checksum": 140336625,
+          "name": "string/cjk/4096",
+          "iterations": 34021
+        },
+        {
+          "bytes": 4112,
+          "elapsedNS": 60891250,
+          "checksum": 283450260,
+          "name": "string/ascii/4096",
+          "iterations": 68966
+        },
+        {
+          "bytes": 66,
+          "elapsedNS": 152312042,
+          "checksum": 57468480,
+          "name": "string/sparse-cjk/64",
+          "iterations": 897945
+        },
+        {
+          "bytes": 74,
+          "elapsedNS": 127282250,
+          "checksum": 32610420,
+          "name": "string/mixed/64",
+          "iterations": 479565
+        },
+        {
+          "bytes": 66,
+          "elapsedNS": 147453958,
+          "checksum": 50051520,
+          "name": "string/emoji/64",
+          "iterations": 782055
+        },
+        {
+          "bytes": 68,
+          "elapsedNS": 141196583,
+          "checksum": 52014402,
+          "name": "string/cjk/64",
+          "iterations": 788097
+        },
+        {
+          "bytes": 92,
+          "elapsedNS": 143560167,
+          "checksum": 79139700,
+          "name": "string/ascii/64",
+          "iterations": 879330
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "variant": "base",
+      "measurements": [
+        {
+          "elapsedNS": 149282916,
+          "checksum": 50215130,
+          "name": "response/mixed/65536",
+          "iterations": 766,
+          "bytes": 71234
+        },
+        {
+          "elapsedNS": 146614583,
+          "checksum": 48510700,
+          "name": "request/mixed/65536",
+          "iterations": 740,
+          "bytes": 71474
+        },
+        {
+          "elapsedNS": 145696917,
+          "checksum": 100314450,
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "bytes": 67740
+        },
+        {
+          "elapsedNS": 150530875,
+          "checksum": 100183320,
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "bytes": 67980
+        },
+        {
+          "elapsedNS": 146502167,
+          "checksum": 45372180,
+          "name": "response/mixed/4096",
+          "iterations": 10986,
+          "bytes": 4544
+        },
+        {
+          "bytes": 4784,
+          "checksum": 40366620,
+          "iterations": 9774,
+          "elapsedNS": 152135791,
+          "name": "request/mixed/4096"
+        },
+        {
+          "bytes": 4316,
+          "checksum": 85915074,
+          "iterations": 20838,
+          "elapsedNS": 147808875,
+          "name": "response/ascii/4096"
+        },
+        {
+          "bytes": 4556,
+          "checksum": 66334947,
+          "iterations": 16089,
+          "elapsedNS": 148314542,
+          "name": "request/ascii/4096"
+        },
+        {
+          "bytes": 65552,
+          "checksum": 5025,
+          "iterations": 5025,
+          "elapsedNS": 154522208,
+          "name": "ignored/cjk/65536"
+        },
+        {
+          "bytes": 65564,
+          "checksum": 4843,
+          "iterations": 4843,
+          "elapsedNS": 148283708,
+          "name": "ignored/ascii/65536"
+        },
+        {
+          "bytes": 10003,
+          "checksum": 33018356,
+          "iterations": 3626,
+          "elapsedNS": 155793000,
+          "name": "array/mixed/128x64"
+        },
+        {
+          "bytes": 8979,
+          "checksum": 45917742,
+          "iterations": 5343,
+          "elapsedNS": 155041042,
+          "name": "array/emoji/128x64"
+        },
+        {
+          "bytes": 9235,
+          "checksum": 46789950,
+          "iterations": 5287,
+          "elapsedNS": 151166250,
+          "name": "array/cjk/128x64"
+        },
+        {
+          "bytes": 12307,
+          "checksum": 69600636,
+          "iterations": 5838,
+          "elapsedNS": 149800709,
+          "name": "array/ascii/128x64"
+        },
+        {
+          "bytes": 4106,
+          "checksum": 10247688,
+          "iterations": 4994,
+          "elapsedNS": 145467208,
+          "name": "string/unicode-escapes/4096"
+        },
+        {
+          "bytes": 4098,
+          "checksum": 144838656,
+          "iterations": 35361,
+          "elapsedNS": 151415792,
+          "name": "string/mixed-no-escapes/4096"
+        },
+        {
+          "bytes": 65538,
+          "checksum": 202637312,
+          "iterations": 3092,
+          "elapsedNS": 147139209,
+          "name": "string/sparse-cjk/65536"
+        },
+        {
+          "bytes": 69410,
+          "checksum": 61487776,
+          "iterations": 938,
+          "elapsedNS": 152940916,
+          "name": "string/mixed/65536"
+        },
+        {
+          "bytes": 65538,
+          "checksum": 134742016,
+          "iterations": 2056,
+          "elapsedNS": 146312042,
+          "name": "string/emoji/65536"
+        },
+        {
+          "bytes": 65540,
+          "checksum": 143593758,
+          "iterations": 2191,
+          "elapsedNS": 147348792,
+          "name": "string/cjk/65536"
+        },
+        {
+          "bytes": 65552,
+          "checksum": 297990300,
+          "iterations": 4546,
+          "elapsedNS": 146659375,
+          "name": "string/ascii/65536"
+        },
+        {
+          "bytes": 4098,
+          "checksum": 194920448,
+          "iterations": 47588,
+          "elapsedNS": 148116959,
+          "name": "string/sparse-cjk/4096"
+        },
+        {
+          "bytes": 4358,
+          "checksum": 59706482,
+          "iterations": 14513,
+          "elapsedNS": 148518333,
+          "name": "string/mixed/4096"
+        },
+        {
+          "bytes": 4098,
+          "checksum": 131624960,
+          "iterations": 32135,
+          "elapsedNS": 146491584,
+          "name": "string/emoji/4096"
+        },
+        {
+          "bytes": 4127,
+          "checksum": 140336625,
+          "iterations": 34021,
+          "elapsedNS": 148292042,
+          "name": "string/cjk/4096"
+        },
+        {
+          "bytes": 4112,
+          "checksum": 283450260,
+          "iterations": 68966,
+          "elapsedNS": 147640750,
+          "name": "string/ascii/4096"
+        },
+        {
+          "bytes": 66,
+          "checksum": 57468480,
+          "iterations": 897945,
+          "elapsedNS": 148062708,
+          "name": "string/sparse-cjk/64"
+        },
+        {
+          "bytes": 74,
+          "checksum": 32610420,
+          "iterations": 479565,
+          "elapsedNS": 147395167,
+          "name": "string/mixed/64"
+        },
+        {
+          "bytes": 66,
+          "checksum": 50051520,
+          "iterations": 782055,
+          "elapsedNS": 148419917,
+          "name": "string/emoji/64"
+        },
+        {
+          "bytes": 68,
+          "checksum": 52014402,
+          "iterations": 788097,
+          "elapsedNS": 147224958,
+          "name": "string/cjk/64"
+        },
+        {
+          "bytes": 92,
+          "checksum": 79139700,
+          "iterations": 879330,
+          "elapsedNS": 143757125,
+          "name": "string/ascii/64"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "variant": "base",
+      "measurements": [
+        {
+          "bytes": 92,
+          "iterations": 879330,
+          "checksum": 79139700,
+          "name": "string/ascii/64",
+          "elapsedNS": 146446750
+        },
+        {
+          "iterations": 788097,
+          "elapsedNS": 148068708,
+          "name": "string/cjk/64",
+          "checksum": 52014402,
+          "bytes": 68
+        },
+        {
+          "iterations": 782055,
+          "elapsedNS": 148206209,
+          "name": "string/emoji/64",
+          "checksum": 50051520,
+          "bytes": 66
+        },
+        {
+          "iterations": 479565,
+          "elapsedNS": 144291208,
+          "name": "string/mixed/64",
+          "checksum": 32610420,
+          "bytes": 74
+        },
+        {
+          "iterations": 897945,
+          "elapsedNS": 149303583,
+          "name": "string/sparse-cjk/64",
+          "checksum": 57468480,
+          "bytes": 66
+        },
+        {
+          "bytes": 4112,
+          "elapsedNS": 146963792,
+          "name": "string/ascii/4096",
+          "iterations": 68966,
+          "checksum": 283450260
+        },
+        {
+          "bytes": 4127,
+          "elapsedNS": 148411833,
+          "name": "string/cjk/4096",
+          "iterations": 34021,
+          "checksum": 140336625
+        },
+        {
+          "bytes": 4098,
+          "elapsedNS": 148488583,
+          "name": "string/emoji/4096",
+          "iterations": 32135,
+          "checksum": 131624960
+        },
+        {
+          "bytes": 4358,
+          "elapsedNS": 155543000,
+          "name": "string/mixed/4096",
+          "iterations": 14513,
+          "checksum": 59706482
+        },
+        {
+          "bytes": 4098,
+          "elapsedNS": 147791125,
+          "name": "string/sparse-cjk/4096",
+          "iterations": 47588,
+          "checksum": 194920448
+        },
+        {
+          "bytes": 65552,
+          "elapsedNS": 147328792,
+          "name": "string/ascii/65536",
+          "iterations": 4546,
+          "checksum": 297990300
+        },
+        {
+          "bytes": 65540,
+          "elapsedNS": 146511750,
+          "name": "string/cjk/65536",
+          "iterations": 2191,
+          "checksum": 143593758
+        },
+        {
+          "bytes": 65538,
+          "elapsedNS": 146783583,
+          "name": "string/emoji/65536",
+          "iterations": 2056,
+          "checksum": 134742016
+        },
+        {
+          "bytes": 69410,
+          "elapsedNS": 151338666,
+          "name": "string/mixed/65536",
+          "iterations": 938,
+          "checksum": 61487776
+        },
+        {
+          "bytes": 65538,
+          "elapsedNS": 147353708,
+          "name": "string/sparse-cjk/65536",
+          "iterations": 3092,
+          "checksum": 202637312
+        },
+        {
+          "bytes": 4098,
+          "elapsedNS": 151889833,
+          "name": "string/mixed-no-escapes/4096",
+          "iterations": 35361,
+          "checksum": 144838656
+        },
+        {
+          "bytes": 4106,
+          "elapsedNS": 144757625,
+          "name": "string/unicode-escapes/4096",
+          "iterations": 4994,
+          "checksum": 10247688
+        },
+        {
+          "bytes": 12307,
+          "elapsedNS": 149316750,
+          "name": "array/ascii/128x64",
+          "iterations": 5838,
+          "checksum": 69600636
+        },
+        {
+          "bytes": 9235,
+          "elapsedNS": 173909791,
+          "name": "array/cjk/128x64",
+          "iterations": 5287,
+          "checksum": 46789950
+        },
+        {
+          "bytes": 8979,
+          "elapsedNS": 177296333,
+          "name": "array/emoji/128x64",
+          "iterations": 5343,
+          "checksum": 45917742
+        },
+        {
+          "bytes": 10003,
+          "elapsedNS": 155677958,
+          "name": "array/mixed/128x64",
+          "iterations": 3626,
+          "checksum": 33018356
+        },
+        {
+          "bytes": 65564,
+          "elapsedNS": 148267917,
+          "name": "ignored/ascii/65536",
+          "iterations": 4843,
+          "checksum": 4843
+        },
+        {
+          "bytes": 65552,
+          "elapsedNS": 151852250,
+          "name": "ignored/cjk/65536",
+          "iterations": 5025,
+          "checksum": 5025
+        },
+        {
+          "bytes": 4556,
+          "elapsedNS": 148690459,
+          "name": "request/ascii/4096",
+          "iterations": 16089,
+          "checksum": 66334947
+        },
+        {
+          "bytes": 4316,
+          "elapsedNS": 148017750,
+          "name": "response/ascii/4096",
+          "iterations": 20838,
+          "checksum": 85915074
+        },
+        {
+          "bytes": 4784,
+          "elapsedNS": 152544250,
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "checksum": 40366620
+        },
+        {
+          "bytes": 4544,
+          "elapsedNS": 147378166,
+          "name": "response/mixed/4096",
+          "iterations": 10986,
+          "checksum": 45372180
+        },
+        {
+          "bytes": 67980,
+          "elapsedNS": 149517375,
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "checksum": 100183320
+        },
+        {
+          "bytes": 67740,
+          "elapsedNS": 145071667,
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "checksum": 100314450
+        },
+        {
+          "bytes": 71474,
+          "elapsedNS": 146763833,
+          "name": "request/mixed/65536",
+          "iterations": 740,
+          "checksum": 48510700
+        },
+        {
+          "bytes": 71234,
+          "elapsedNS": 151025042,
+          "name": "response/mixed/65536",
+          "iterations": 766,
+          "checksum": 50215130
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "variant": "pr",
+      "measurements": [
+        {
+          "iterations": 879330,
+          "checksum": 79139700,
+          "name": "string/ascii/64",
+          "bytes": 92,
+          "elapsedNS": 146959000
+        },
+        {
+          "iterations": 788097,
+          "checksum": 52014402,
+          "name": "string/cjk/64",
+          "bytes": 68,
+          "elapsedNS": 142883958
+        },
+        {
+          "iterations": 782055,
+          "checksum": 50051520,
+          "name": "string/emoji/64",
+          "bytes": 66,
+          "elapsedNS": 147783959
+        },
+        {
+          "iterations": 479565,
+          "checksum": 32610420,
+          "name": "string/mixed/64",
+          "bytes": 74,
+          "elapsedNS": 127891375
+        },
+        {
+          "iterations": 897945,
+          "checksum": 57468480,
+          "name": "string/sparse-cjk/64",
+          "bytes": 66,
+          "elapsedNS": 150327042
+        },
+        {
+          "iterations": 68966,
+          "checksum": 283450260,
+          "name": "string/ascii/4096",
+          "bytes": 4112,
+          "elapsedNS": 62791500
+        },
+        {
+          "name": "string/cjk/4096",
+          "elapsedNS": 114895833,
+          "checksum": 140336625,
+          "bytes": 4127,
+          "iterations": 34021
+        },
+        {
+          "name": "string/emoji/4096",
+          "elapsedNS": 133803000,
+          "checksum": 131624960,
+          "bytes": 4098,
+          "iterations": 32135
+        },
+        {
+          "name": "string/mixed/4096",
+          "elapsedNS": 115582416,
+          "checksum": 59706482,
+          "bytes": 4358,
+          "iterations": 14513
+        },
+        {
+          "name": "string/sparse-cjk/4096",
+          "elapsedNS": 97896500,
+          "checksum": 194920448,
+          "bytes": 4098,
+          "iterations": 47588
+        },
+        {
+          "name": "string/ascii/65536",
+          "elapsedNS": 60071375,
+          "checksum": 297990300,
+          "bytes": 65552,
+          "iterations": 4546
+        },
+        {
+          "name": "string/cjk/65536",
+          "elapsedNS": 113671208,
+          "checksum": 143593758,
+          "bytes": 65540,
+          "iterations": 2191
+        },
+        {
+          "name": "string/emoji/65536",
+          "elapsedNS": 131487500,
+          "checksum": 134742016,
+          "bytes": 65538,
+          "iterations": 2056
+        },
+        {
+          "name": "string/mixed/65536",
+          "elapsedNS": 116189958,
+          "checksum": 61487776,
+          "bytes": 69410,
+          "iterations": 938
+        },
+        {
+          "name": "string/sparse-cjk/65536",
+          "elapsedNS": 107676709,
+          "checksum": 202637312,
+          "bytes": 65538,
+          "iterations": 3092
+        },
+        {
+          "name": "string/mixed-no-escapes/4096",
+          "elapsedNS": 145759208,
+          "checksum": 144838656,
+          "bytes": 4098,
+          "iterations": 35361
+        },
+        {
+          "name": "string/unicode-escapes/4096",
+          "elapsedNS": 56719166,
+          "checksum": 10247688,
+          "bytes": 4106,
+          "iterations": 4994
+        },
+        {
+          "name": "array/ascii/128x64",
+          "elapsedNS": 135587208,
+          "checksum": 69600636,
+          "bytes": 12307,
+          "iterations": 5838
+        },
+        {
+          "name": "array/cjk/128x64",
+          "elapsedNS": 142073500,
+          "checksum": 46789950,
+          "bytes": 9235,
+          "iterations": 5287
+        },
+        {
+          "name": "array/emoji/128x64",
+          "elapsedNS": 152593792,
+          "checksum": 45917742,
+          "bytes": 8979,
+          "iterations": 5343
+        },
+        {
+          "name": "array/mixed/128x64",
+          "elapsedNS": 135628083,
+          "checksum": 33018356,
+          "bytes": 10003,
+          "iterations": 3626
+        },
+        {
+          "name": "ignored/ascii/65536",
+          "elapsedNS": 58088083,
+          "checksum": 4843,
+          "bytes": 65564,
+          "iterations": 4843
+        },
+        {
+          "name": "ignored/cjk/65536",
+          "elapsedNS": 75101625,
+          "checksum": 5025,
+          "bytes": 65552,
+          "iterations": 5025
+        },
+        {
+          "name": "request/ascii/4096",
+          "elapsedNS": 132409750,
+          "checksum": 66334947,
+          "bytes": 4556,
+          "iterations": 16089
+        },
+        {
+          "name": "response/ascii/4096",
+          "elapsedNS": 129152208,
+          "checksum": 85915074,
+          "bytes": 4316,
+          "iterations": 20838
+        },
+        {
+          "name": "request/mixed/4096",
+          "elapsedNS": 120623042,
+          "checksum": 40366620,
+          "bytes": 4784,
+          "iterations": 9774
+        },
+        {
+          "name": "response/mixed/4096",
+          "elapsedNS": 113669833,
+          "checksum": 45372180,
+          "bytes": 4544,
+          "iterations": 10986
+        },
+        {
+          "name": "request/ascii/65536",
+          "elapsedNS": 122909792,
+          "checksum": 100183320,
+          "bytes": 67980,
+          "iterations": 1528
+        },
+        {
+          "name": "response/ascii/65536",
+          "elapsedNS": 119653833,
+          "checksum": 100314450,
+          "bytes": 67740,
+          "iterations": 1530
+        },
+        {
+          "name": "request/mixed/65536",
+          "elapsedNS": 110111583,
+          "checksum": 48510700,
+          "bytes": 71474,
+          "iterations": 740
+        },
+        {
+          "name": "response/mixed/65536",
+          "elapsedNS": 110219792,
+          "checksum": 50215130,
+          "bytes": 71234,
+          "iterations": 766
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "variant": "pr",
+      "measurements": [
+        {
+          "iterations": 766,
+          "name": "response/mixed/65536",
+          "elapsedNS": 111506042,
+          "checksum": 50215130,
+          "bytes": 71234
+        },
+        {
+          "bytes": 71474,
+          "name": "request/mixed/65536",
+          "iterations": 740,
+          "checksum": 48510700,
+          "elapsedNS": 109121042
+        },
+        {
+          "bytes": 67740,
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "checksum": 100314450,
+          "elapsedNS": 120216375
+        },
+        {
+          "bytes": 67980,
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "checksum": 100183320,
+          "elapsedNS": 122453375
+        },
+        {
+          "bytes": 4544,
+          "name": "response/mixed/4096",
+          "iterations": 10986,
+          "checksum": 45372180,
+          "elapsedNS": 113217250
+        },
+        {
+          "bytes": 4784,
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "checksum": 40366620,
+          "elapsedNS": 119883708
+        },
+        {
+          "name": "response/ascii/4096",
+          "bytes": 4316,
+          "iterations": 20838,
+          "elapsedNS": 129303125,
+          "checksum": 85915074
+        },
+        {
+          "name": "request/ascii/4096",
+          "bytes": 4556,
+          "iterations": 16089,
+          "elapsedNS": 135340292,
+          "checksum": 66334947
+        },
+        {
+          "name": "ignored/cjk/65536",
+          "bytes": 65552,
+          "iterations": 5025,
+          "elapsedNS": 74573542,
+          "checksum": 5025
+        },
+        {
+          "name": "ignored/ascii/65536",
+          "bytes": 65564,
+          "iterations": 4843,
+          "elapsedNS": 58300417,
+          "checksum": 4843
+        },
+        {
+          "name": "array/mixed/128x64",
+          "bytes": 10003,
+          "iterations": 3626,
+          "elapsedNS": 139455000,
+          "checksum": 33018356
+        },
+        {
+          "name": "array/emoji/128x64",
+          "bytes": 8979,
+          "iterations": 5343,
+          "elapsedNS": 152423625,
+          "checksum": 45917742
+        },
+        {
+          "name": "array/cjk/128x64",
+          "bytes": 9235,
+          "iterations": 5287,
+          "elapsedNS": 141546417,
+          "checksum": 46789950
+        },
+        {
+          "name": "array/ascii/128x64",
+          "bytes": 12307,
+          "iterations": 5838,
+          "elapsedNS": 136508500,
+          "checksum": 69600636
+        },
+        {
+          "name": "string/unicode-escapes/4096",
+          "bytes": 4106,
+          "iterations": 4994,
+          "elapsedNS": 55673958,
+          "checksum": 10247688
+        },
+        {
+          "name": "string/mixed-no-escapes/4096",
+          "bytes": 4098,
+          "iterations": 35361,
+          "elapsedNS": 148255459,
+          "checksum": 144838656
+        },
+        {
+          "name": "string/sparse-cjk/65536",
+          "bytes": 65538,
+          "iterations": 3092,
+          "elapsedNS": 107249292,
+          "checksum": 202637312
+        },
+        {
+          "name": "string/mixed/65536",
+          "bytes": 69410,
+          "iterations": 938,
+          "elapsedNS": 117793958,
+          "checksum": 61487776
+        },
+        {
+          "name": "string/emoji/65536",
+          "bytes": 65538,
+          "iterations": 2056,
+          "elapsedNS": 130517583,
+          "checksum": 134742016
+        },
+        {
+          "name": "string/cjk/65536",
+          "bytes": 65540,
+          "iterations": 2191,
+          "elapsedNS": 112898375,
+          "checksum": 143593758
+        },
+        {
+          "name": "string/ascii/65536",
+          "bytes": 65552,
+          "iterations": 4546,
+          "elapsedNS": 59043750,
+          "checksum": 297990300
+        },
+        {
+          "name": "string/sparse-cjk/4096",
+          "bytes": 4098,
+          "iterations": 47588,
+          "elapsedNS": 96780791,
+          "checksum": 194920448
+        },
+        {
+          "name": "string/mixed/4096",
+          "bytes": 4358,
+          "iterations": 14513,
+          "elapsedNS": 117378583,
+          "checksum": 59706482
+        },
+        {
+          "name": "string/emoji/4096",
+          "bytes": 4098,
+          "iterations": 32135,
+          "elapsedNS": 132313791,
+          "checksum": 131624960
+        },
+        {
+          "name": "string/cjk/4096",
+          "bytes": 4127,
+          "iterations": 34021,
+          "elapsedNS": 114909750,
+          "checksum": 140336625
+        },
+        {
+          "name": "string/ascii/4096",
+          "bytes": 4112,
+          "iterations": 68966,
+          "elapsedNS": 61057750,
+          "checksum": 283450260
+        },
+        {
+          "name": "string/sparse-cjk/64",
+          "bytes": 66,
+          "iterations": 897945,
+          "elapsedNS": 151705333,
+          "checksum": 57468480
+        },
+        {
+          "name": "string/mixed/64",
+          "bytes": 74,
+          "iterations": 479565,
+          "elapsedNS": 130831084,
+          "checksum": 32610420
+        },
+        {
+          "name": "string/emoji/64",
+          "bytes": 66,
+          "iterations": 782055,
+          "elapsedNS": 147648000,
+          "checksum": 50051520
+        },
+        {
+          "name": "string/cjk/64",
+          "bytes": 68,
+          "iterations": 788097,
+          "elapsedNS": 145390375,
+          "checksum": 52014402
+        },
+        {
+          "name": "string/ascii/64",
+          "bytes": 92,
+          "iterations": 879330,
+          "elapsedNS": 143398750,
+          "checksum": 79139700
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "variant": "base",
+      "measurements": [
+        {
+          "iterations": 766,
+          "elapsedNS": 150347208,
+          "name": "response/mixed/65536",
+          "bytes": 71234,
+          "checksum": 50215130
+        },
+        {
+          "iterations": 740,
+          "elapsedNS": 145783375,
+          "name": "request/mixed/65536",
+          "bytes": 71474,
+          "checksum": 48510700
+        },
+        {
+          "iterations": 1530,
+          "elapsedNS": 147699750,
+          "name": "response/ascii/65536",
+          "bytes": 67740,
+          "checksum": 100314450
+        },
+        {
+          "iterations": 1528,
+          "elapsedNS": 153270208,
+          "name": "request/ascii/65536",
+          "bytes": 67980,
+          "checksum": 100183320
+        },
+        {
+          "iterations": 10986,
+          "elapsedNS": 148161167,
+          "name": "response/mixed/4096",
+          "bytes": 4544,
+          "checksum": 45372180
+        },
+        {
+          "bytes": 4784,
+          "name": "request/mixed/4096",
+          "elapsedNS": 153343875,
+          "iterations": 9774,
+          "checksum": 40366620
+        },
+        {
+          "bytes": 4316,
+          "name": "response/ascii/4096",
+          "elapsedNS": 150490375,
+          "iterations": 20838,
+          "checksum": 85915074
+        },
+        {
+          "bytes": 4556,
+          "name": "request/ascii/4096",
+          "elapsedNS": 151069333,
+          "iterations": 16089,
+          "checksum": 66334947
+        },
+        {
+          "bytes": 65552,
+          "name": "ignored/cjk/65536",
+          "elapsedNS": 152306250,
+          "iterations": 5025,
+          "checksum": 5025
+        },
+        {
+          "bytes": 65564,
+          "name": "ignored/ascii/65536",
+          "elapsedNS": 146399959,
+          "iterations": 4843,
+          "checksum": 4843
+        },
+        {
+          "bytes": 10003,
+          "name": "array/mixed/128x64",
+          "elapsedNS": 159408083,
+          "iterations": 3626,
+          "checksum": 33018356
+        },
+        {
+          "bytes": 8979,
+          "name": "array/emoji/128x64",
+          "elapsedNS": 160316833,
+          "iterations": 5343,
+          "checksum": 45917742
+        },
+        {
+          "bytes": 9235,
+          "name": "array/cjk/128x64",
+          "elapsedNS": 157992291,
+          "iterations": 5287,
+          "checksum": 46789950
+        },
+        {
+          "bytes": 12307,
+          "name": "array/ascii/128x64",
+          "elapsedNS": 156075500,
+          "iterations": 5838,
+          "checksum": 69600636
+        },
+        {
+          "bytes": 4106,
+          "name": "string/unicode-escapes/4096",
+          "elapsedNS": 145782375,
+          "iterations": 4994,
+          "checksum": 10247688
+        },
+        {
+          "bytes": 4098,
+          "name": "string/mixed-no-escapes/4096",
+          "elapsedNS": 150070208,
+          "iterations": 35361,
+          "checksum": 144838656
+        },
+        {
+          "bytes": 65538,
+          "name": "string/sparse-cjk/65536",
+          "elapsedNS": 147547166,
+          "iterations": 3092,
+          "checksum": 202637312
+        },
+        {
+          "bytes": 69410,
+          "name": "string/mixed/65536",
+          "elapsedNS": 153825667,
+          "iterations": 938,
+          "checksum": 61487776
+        },
+        {
+          "bytes": 65538,
+          "name": "string/emoji/65536",
+          "elapsedNS": 147138708,
+          "iterations": 2056,
+          "checksum": 134742016
+        },
+        {
+          "bytes": 65540,
+          "name": "string/cjk/65536",
+          "elapsedNS": 148314291,
+          "iterations": 2191,
+          "checksum": 143593758
+        },
+        {
+          "bytes": 65552,
+          "name": "string/ascii/65536",
+          "elapsedNS": 148769667,
+          "iterations": 4546,
+          "checksum": 297990300
+        },
+        {
+          "bytes": 4098,
+          "name": "string/sparse-cjk/4096",
+          "elapsedNS": 148669416,
+          "iterations": 47588,
+          "checksum": 194920448
+        },
+        {
+          "bytes": 4358,
+          "name": "string/mixed/4096",
+          "elapsedNS": 149623417,
+          "iterations": 14513,
+          "checksum": 59706482
+        },
+        {
+          "bytes": 4098,
+          "name": "string/emoji/4096",
+          "elapsedNS": 148415667,
+          "iterations": 32135,
+          "checksum": 131624960
+        },
+        {
+          "bytes": 4127,
+          "name": "string/cjk/4096",
+          "elapsedNS": 148851875,
+          "iterations": 34021,
+          "checksum": 140336625
+        },
+        {
+          "bytes": 4112,
+          "name": "string/ascii/4096",
+          "elapsedNS": 150478083,
+          "iterations": 68966,
+          "checksum": 283450260
+        },
+        {
+          "bytes": 66,
+          "name": "string/sparse-cjk/64",
+          "elapsedNS": 156225209,
+          "iterations": 897945,
+          "checksum": 57468480
+        },
+        {
+          "bytes": 74,
+          "name": "string/mixed/64",
+          "elapsedNS": 150450250,
+          "iterations": 479565,
+          "checksum": 32610420
+        },
+        {
+          "bytes": 66,
+          "name": "string/emoji/64",
+          "elapsedNS": 156674625,
+          "iterations": 782055,
+          "checksum": 50051520
+        },
+        {
+          "bytes": 68,
+          "name": "string/cjk/64",
+          "elapsedNS": 155672209,
+          "iterations": 788097,
+          "checksum": 52014402
+        },
+        {
+          "bytes": 92,
+          "name": "string/ascii/64",
+          "elapsedNS": 151805708,
+          "iterations": 879330,
+          "checksum": 79139700
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "variant": "base",
+      "measurements": [
+        {
+          "iterations": 879330,
+          "bytes": 92,
+          "checksum": 79139700,
+          "name": "string/ascii/64",
+          "elapsedNS": 147726500
+        },
+        {
+          "iterations": 788097,
+          "bytes": 68,
+          "checksum": 52014402,
+          "name": "string/cjk/64",
+          "elapsedNS": 148439584
+        },
+        {
+          "iterations": 782055,
+          "bytes": 66,
+          "checksum": 50051520,
+          "name": "string/emoji/64",
+          "elapsedNS": 150040083
+        },
+        {
+          "iterations": 479565,
+          "bytes": 74,
+          "checksum": 32610420,
+          "name": "string/mixed/64",
+          "elapsedNS": 148177875
+        },
+        {
+          "iterations": 897945,
+          "bytes": 66,
+          "checksum": 57468480,
+          "name": "string/sparse-cjk/64",
+          "elapsedNS": 150385959
+        },
+        {
+          "iterations": 68966,
+          "checksum": 283450260,
+          "bytes": 4112,
+          "elapsedNS": 148652333,
+          "name": "string/ascii/4096"
+        },
+        {
+          "iterations": 34021,
+          "checksum": 140336625,
+          "bytes": 4127,
+          "elapsedNS": 150901542,
+          "name": "string/cjk/4096"
+        },
+        {
+          "iterations": 32135,
+          "checksum": 131624960,
+          "bytes": 4098,
+          "elapsedNS": 146948334,
+          "name": "string/emoji/4096"
+        },
+        {
+          "iterations": 14513,
+          "checksum": 59706482,
+          "bytes": 4358,
+          "elapsedNS": 151050083,
+          "name": "string/mixed/4096"
+        },
+        {
+          "iterations": 47588,
+          "checksum": 194920448,
+          "bytes": 4098,
+          "elapsedNS": 146830375,
+          "name": "string/sparse-cjk/4096"
+        },
+        {
+          "iterations": 4546,
+          "checksum": 297990300,
+          "bytes": 65552,
+          "elapsedNS": 147016708,
+          "name": "string/ascii/65536"
+        },
+        {
+          "iterations": 2191,
+          "checksum": 143593758,
+          "bytes": 65540,
+          "elapsedNS": 147175458,
+          "name": "string/cjk/65536"
+        },
+        {
+          "iterations": 2056,
+          "checksum": 134742016,
+          "bytes": 65538,
+          "elapsedNS": 148561542,
+          "name": "string/emoji/65536"
+        },
+        {
+          "iterations": 938,
+          "checksum": 61487776,
+          "bytes": 69410,
+          "elapsedNS": 152565459,
+          "name": "string/mixed/65536"
+        },
+        {
+          "iterations": 3092,
+          "checksum": 202637312,
+          "bytes": 65538,
+          "elapsedNS": 146031375,
+          "name": "string/sparse-cjk/65536"
+        },
+        {
+          "iterations": 35361,
+          "checksum": 144838656,
+          "bytes": 4098,
+          "elapsedNS": 150691708,
+          "name": "string/mixed-no-escapes/4096"
+        },
+        {
+          "iterations": 4994,
+          "checksum": 10247688,
+          "bytes": 4106,
+          "elapsedNS": 145399625,
+          "name": "string/unicode-escapes/4096"
+        },
+        {
+          "iterations": 5838,
+          "checksum": 69600636,
+          "bytes": 12307,
+          "elapsedNS": 147245083,
+          "name": "array/ascii/128x64"
+        },
+        {
+          "iterations": 5287,
+          "checksum": 46789950,
+          "bytes": 9235,
+          "elapsedNS": 152027625,
+          "name": "array/cjk/128x64"
+        },
+        {
+          "iterations": 5343,
+          "checksum": 45917742,
+          "bytes": 8979,
+          "elapsedNS": 156772292,
+          "name": "array/emoji/128x64"
+        },
+        {
+          "iterations": 3626,
+          "checksum": 33018356,
+          "bytes": 10003,
+          "elapsedNS": 154330667,
+          "name": "array/mixed/128x64"
+        },
+        {
+          "iterations": 4843,
+          "checksum": 4843,
+          "bytes": 65564,
+          "elapsedNS": 146644584,
+          "name": "ignored/ascii/65536"
+        },
+        {
+          "iterations": 5025,
+          "checksum": 5025,
+          "bytes": 65552,
+          "elapsedNS": 152029125,
+          "name": "ignored/cjk/65536"
+        },
+        {
+          "iterations": 16089,
+          "checksum": 66334947,
+          "bytes": 4556,
+          "elapsedNS": 147726083,
+          "name": "request/ascii/4096"
+        },
+        {
+          "iterations": 20838,
+          "checksum": 85915074,
+          "bytes": 4316,
+          "elapsedNS": 146389041,
+          "name": "response/ascii/4096"
+        },
+        {
+          "iterations": 9774,
+          "checksum": 40366620,
+          "bytes": 4784,
+          "elapsedNS": 151574000,
+          "name": "request/mixed/4096"
+        },
+        {
+          "iterations": 10986,
+          "checksum": 45372180,
+          "bytes": 4544,
+          "elapsedNS": 146282083,
+          "name": "response/mixed/4096"
+        },
+        {
+          "iterations": 1528,
+          "checksum": 100183320,
+          "bytes": 67980,
+          "elapsedNS": 148289542,
+          "name": "request/ascii/65536"
+        },
+        {
+          "iterations": 1530,
+          "checksum": 100314450,
+          "bytes": 67740,
+          "elapsedNS": 144822417,
+          "name": "response/ascii/65536"
+        },
+        {
+          "iterations": 740,
+          "checksum": 48510700,
+          "bytes": 71474,
+          "elapsedNS": 145629125,
+          "name": "request/mixed/65536"
+        },
+        {
+          "iterations": 766,
+          "checksum": 50215130,
+          "bytes": 71234,
+          "elapsedNS": 147664459,
+          "name": "response/mixed/65536"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "variant": "pr",
+      "measurements": [
+        {
+          "checksum": 79139700,
+          "iterations": 879330,
+          "name": "string/ascii/64",
+          "elapsedNS": 146774125,
+          "bytes": 92
+        },
+        {
+          "checksum": 52014402,
+          "iterations": 788097,
+          "name": "string/cjk/64",
+          "elapsedNS": 143591208,
+          "bytes": 68
+        },
+        {
+          "checksum": 50051520,
+          "iterations": 782055,
+          "name": "string/emoji/64",
+          "elapsedNS": 149454750,
+          "bytes": 66
+        },
+        {
+          "checksum": 32610420,
+          "iterations": 479565,
+          "name": "string/mixed/64",
+          "elapsedNS": 126468042,
+          "bytes": 74
+        },
+        {
+          "checksum": 57468480,
+          "iterations": 897945,
+          "name": "string/sparse-cjk/64",
+          "elapsedNS": 148272125,
+          "bytes": 66
+        },
+        {
+          "checksum": 283450260,
+          "iterations": 68966,
+          "name": "string/ascii/4096",
+          "elapsedNS": 64532959,
+          "bytes": 4112
+        },
+        {
+          "name": "string/cjk/4096",
+          "bytes": 4127,
+          "elapsedNS": 115301792,
+          "iterations": 34021,
+          "checksum": 140336625
+        },
+        {
+          "name": "string/emoji/4096",
+          "bytes": 4098,
+          "elapsedNS": 134396917,
+          "iterations": 32135,
+          "checksum": 131624960
+        },
+        {
+          "name": "string/mixed/4096",
+          "bytes": 4358,
+          "elapsedNS": 119351125,
+          "iterations": 14513,
+          "checksum": 59706482
+        },
+        {
+          "name": "string/sparse-cjk/4096",
+          "bytes": 4098,
+          "elapsedNS": 98597375,
+          "iterations": 47588,
+          "checksum": 194920448
+        },
+        {
+          "name": "string/ascii/65536",
+          "bytes": 65552,
+          "elapsedNS": 60133500,
+          "iterations": 4546,
+          "checksum": 297990300
+        },
+        {
+          "name": "string/cjk/65536",
+          "bytes": 65540,
+          "elapsedNS": 115644208,
+          "iterations": 2191,
+          "checksum": 143593758
+        },
+        {
+          "name": "string/emoji/65536",
+          "bytes": 65538,
+          "elapsedNS": 132752792,
+          "iterations": 2056,
+          "checksum": 134742016
+        },
+        {
+          "name": "string/mixed/65536",
+          "bytes": 69410,
+          "elapsedNS": 118045375,
+          "iterations": 938,
+          "checksum": 61487776
+        },
+        {
+          "name": "string/sparse-cjk/65536",
+          "bytes": 65538,
+          "elapsedNS": 107353000,
+          "iterations": 3092,
+          "checksum": 202637312
+        },
+        {
+          "name": "string/mixed-no-escapes/4096",
+          "bytes": 4098,
+          "elapsedNS": 145949125,
+          "iterations": 35361,
+          "checksum": 144838656
+        },
+        {
+          "name": "string/unicode-escapes/4096",
+          "bytes": 4106,
+          "elapsedNS": 55671625,
+          "iterations": 4994,
+          "checksum": 10247688
+        },
+        {
+          "name": "array/ascii/128x64",
+          "bytes": 12307,
+          "elapsedNS": 135124125,
+          "iterations": 5838,
+          "checksum": 69600636
+        },
+        {
+          "name": "array/cjk/128x64",
+          "bytes": 9235,
+          "elapsedNS": 144041417,
+          "iterations": 5287,
+          "checksum": 46789950
+        },
+        {
+          "name": "array/emoji/128x64",
+          "bytes": 8979,
+          "elapsedNS": 151505708,
+          "iterations": 5343,
+          "checksum": 45917742
+        },
+        {
+          "name": "array/mixed/128x64",
+          "bytes": 10003,
+          "elapsedNS": 134831083,
+          "iterations": 3626,
+          "checksum": 33018356
+        },
+        {
+          "name": "ignored/ascii/65536",
+          "bytes": 65564,
+          "elapsedNS": 89163292,
+          "iterations": 4843,
+          "checksum": 4843
+        },
+        {
+          "name": "ignored/cjk/65536",
+          "bytes": 65552,
+          "elapsedNS": 74072083,
+          "iterations": 5025,
+          "checksum": 5025
+        },
+        {
+          "name": "request/ascii/4096",
+          "bytes": 4556,
+          "elapsedNS": 133252458,
+          "iterations": 16089,
+          "checksum": 66334947
+        },
+        {
+          "name": "response/ascii/4096",
+          "bytes": 4316,
+          "elapsedNS": 130584000,
+          "iterations": 20838,
+          "checksum": 85915074
+        },
+        {
+          "name": "request/mixed/4096",
+          "bytes": 4784,
+          "elapsedNS": 121367000,
+          "iterations": 9774,
+          "checksum": 40366620
+        },
+        {
+          "name": "response/mixed/4096",
+          "bytes": 4544,
+          "elapsedNS": 111455625,
+          "iterations": 10986,
+          "checksum": 45372180
+        },
+        {
+          "name": "request/ascii/65536",
+          "bytes": 67980,
+          "elapsedNS": 122870917,
+          "iterations": 1528,
+          "checksum": 100183320
+        },
+        {
+          "name": "response/ascii/65536",
+          "bytes": 67740,
+          "elapsedNS": 120649958,
+          "iterations": 1530,
+          "checksum": 100314450
+        },
+        {
+          "name": "request/mixed/65536",
+          "bytes": 71474,
+          "elapsedNS": 109580459,
+          "iterations": 740,
+          "checksum": 48510700
+        },
+        {
+          "name": "response/mixed/65536",
+          "bytes": 71234,
+          "elapsedNS": 110546042,
+          "iterations": 766,
+          "checksum": 50215130
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "variant": "pr",
+      "measurements": [
+        {
+          "bytes": 71234,
+          "iterations": 766,
+          "elapsedNS": 116532584,
+          "name": "response/mixed/65536",
+          "checksum": 50215130
+        },
+        {
+          "name": "request/mixed/65536",
+          "iterations": 740,
+          "checksum": 48510700,
+          "bytes": 71474,
+          "elapsedNS": 111890458
+        },
+        {
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "checksum": 100314450,
+          "bytes": 67740,
+          "elapsedNS": 120272125
+        },
+        {
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "checksum": 100183320,
+          "bytes": 67980,
+          "elapsedNS": 122382167
+        },
+        {
+          "name": "response/mixed/4096",
+          "iterations": 10986,
+          "checksum": 45372180,
+          "bytes": 4544,
+          "elapsedNS": 114650500
+        },
+        {
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "checksum": 40366620,
+          "bytes": 4784,
+          "elapsedNS": 121584458
+        },
+        {
+          "elapsedNS": 128771875,
+          "bytes": 4316,
+          "name": "response/ascii/4096",
+          "checksum": 85915074,
+          "iterations": 20838
+        },
+        {
+          "elapsedNS": 135512542,
+          "bytes": 4556,
+          "name": "request/ascii/4096",
+          "checksum": 66334947,
+          "iterations": 16089
+        },
+        {
+          "elapsedNS": 76231625,
+          "bytes": 65552,
+          "name": "ignored/cjk/65536",
+          "checksum": 5025,
+          "iterations": 5025
+        },
+        {
+          "elapsedNS": 53836708,
+          "bytes": 65564,
+          "name": "ignored/ascii/65536",
+          "checksum": 4843,
+          "iterations": 4843
+        },
+        {
+          "elapsedNS": 139563250,
+          "bytes": 10003,
+          "name": "array/mixed/128x64",
+          "checksum": 33018356,
+          "iterations": 3626
+        },
+        {
+          "elapsedNS": 154084208,
+          "bytes": 8979,
+          "name": "array/emoji/128x64",
+          "checksum": 45917742,
+          "iterations": 5343
+        },
+        {
+          "elapsedNS": 143397750,
+          "bytes": 9235,
+          "name": "array/cjk/128x64",
+          "checksum": 46789950,
+          "iterations": 5287
+        },
+        {
+          "elapsedNS": 136416750,
+          "bytes": 12307,
+          "name": "array/ascii/128x64",
+          "checksum": 69600636,
+          "iterations": 5838
+        },
+        {
+          "elapsedNS": 55997291,
+          "bytes": 4106,
+          "name": "string/unicode-escapes/4096",
+          "checksum": 10247688,
+          "iterations": 4994
+        },
+        {
+          "elapsedNS": 146745333,
+          "bytes": 4098,
+          "name": "string/mixed-no-escapes/4096",
+          "checksum": 144838656,
+          "iterations": 35361
+        },
+        {
+          "elapsedNS": 106668458,
+          "bytes": 65538,
+          "name": "string/sparse-cjk/65536",
+          "checksum": 202637312,
+          "iterations": 3092
+        },
+        {
+          "elapsedNS": 119251208,
+          "bytes": 69410,
+          "name": "string/mixed/65536",
+          "checksum": 61487776,
+          "iterations": 938
+        },
+        {
+          "elapsedNS": 131415167,
+          "bytes": 65538,
+          "name": "string/emoji/65536",
+          "checksum": 134742016,
+          "iterations": 2056
+        },
+        {
+          "elapsedNS": 112097083,
+          "bytes": 65540,
+          "name": "string/cjk/65536",
+          "checksum": 143593758,
+          "iterations": 2191
+        },
+        {
+          "elapsedNS": 58795625,
+          "bytes": 65552,
+          "name": "string/ascii/65536",
+          "checksum": 297990300,
+          "iterations": 4546
+        },
+        {
+          "elapsedNS": 95440709,
+          "bytes": 4098,
+          "name": "string/sparse-cjk/4096",
+          "checksum": 194920448,
+          "iterations": 47588
+        },
+        {
+          "elapsedNS": 116230500,
+          "bytes": 4358,
+          "name": "string/mixed/4096",
+          "checksum": 59706482,
+          "iterations": 14513
+        },
+        {
+          "elapsedNS": 131418875,
+          "bytes": 4098,
+          "name": "string/emoji/4096",
+          "checksum": 131624960,
+          "iterations": 32135
+        },
+        {
+          "elapsedNS": 117690916,
+          "bytes": 4127,
+          "name": "string/cjk/4096",
+          "checksum": 140336625,
+          "iterations": 34021
+        },
+        {
+          "elapsedNS": 62523750,
+          "bytes": 4112,
+          "name": "string/ascii/4096",
+          "checksum": 283450260,
+          "iterations": 68966
+        },
+        {
+          "elapsedNS": 160413000,
+          "bytes": 66,
+          "name": "string/sparse-cjk/64",
+          "checksum": 57468480,
+          "iterations": 897945
+        },
+        {
+          "elapsedNS": 140235500,
+          "bytes": 74,
+          "name": "string/mixed/64",
+          "checksum": 32610420,
+          "iterations": 479565
+        },
+        {
+          "elapsedNS": 148716666,
+          "bytes": 66,
+          "name": "string/emoji/64",
+          "checksum": 50051520,
+          "iterations": 782055
+        },
+        {
+          "elapsedNS": 143489667,
+          "bytes": 68,
+          "name": "string/cjk/64",
+          "checksum": 52014402,
+          "iterations": 788097
+        },
+        {
+          "elapsedNS": 145261250,
+          "bytes": 92,
+          "name": "string/ascii/64",
+          "checksum": 79139700,
+          "iterations": 879330
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "variant": "base",
+      "measurements": [
+        {
+          "name": "response/mixed/65536",
+          "bytes": 71234,
+          "iterations": 766,
+          "checksum": 50215130,
+          "elapsedNS": 151636209
+        },
+        {
+          "name": "request/mixed/65536",
+          "bytes": 71474,
+          "iterations": 740,
+          "checksum": 48510700,
+          "elapsedNS": 146487500
+        },
+        {
+          "name": "response/ascii/65536",
+          "bytes": 67740,
+          "iterations": 1530,
+          "checksum": 100314450,
+          "elapsedNS": 145241166
+        },
+        {
+          "name": "request/ascii/65536",
+          "bytes": 67980,
+          "iterations": 1528,
+          "checksum": 100183320,
+          "elapsedNS": 150499000
+        },
+        {
+          "name": "response/mixed/4096",
+          "bytes": 4544,
+          "iterations": 10986,
+          "checksum": 45372180,
+          "elapsedNS": 147701666
+        },
+        {
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "bytes": 4784,
+          "checksum": 40366620,
+          "elapsedNS": 152063000
+        },
+        {
+          "name": "response/ascii/4096",
+          "iterations": 20838,
+          "bytes": 4316,
+          "checksum": 85915074,
+          "elapsedNS": 150551458
+        },
+        {
+          "name": "request/ascii/4096",
+          "iterations": 16089,
+          "bytes": 4556,
+          "checksum": 66334947,
+          "elapsedNS": 151389417
+        },
+        {
+          "name": "ignored/cjk/65536",
+          "iterations": 5025,
+          "bytes": 65552,
+          "checksum": 5025,
+          "elapsedNS": 152210292
+        },
+        {
+          "name": "ignored/ascii/65536",
+          "iterations": 4843,
+          "bytes": 65564,
+          "checksum": 4843,
+          "elapsedNS": 148247625
+        },
+        {
+          "name": "array/mixed/128x64",
+          "iterations": 3626,
+          "bytes": 10003,
+          "checksum": 33018356,
+          "elapsedNS": 154740875
+        },
+        {
+          "name": "array/emoji/128x64",
+          "iterations": 5343,
+          "bytes": 8979,
+          "checksum": 45917742,
+          "elapsedNS": 158153000
+        },
+        {
+          "name": "array/cjk/128x64",
+          "iterations": 5287,
+          "bytes": 9235,
+          "checksum": 46789950,
+          "elapsedNS": 150445250
+        },
+        {
+          "name": "array/ascii/128x64",
+          "iterations": 5838,
+          "bytes": 12307,
+          "checksum": 69600636,
+          "elapsedNS": 150500625
+        },
+        {
+          "name": "string/unicode-escapes/4096",
+          "iterations": 4994,
+          "bytes": 4106,
+          "checksum": 10247688,
+          "elapsedNS": 144389292
+        },
+        {
+          "name": "string/mixed-no-escapes/4096",
+          "iterations": 35361,
+          "bytes": 4098,
+          "checksum": 144838656,
+          "elapsedNS": 151077708
+        },
+        {
+          "name": "string/sparse-cjk/65536",
+          "iterations": 3092,
+          "bytes": 65538,
+          "checksum": 202637312,
+          "elapsedNS": 146511416
+        },
+        {
+          "name": "string/mixed/65536",
+          "iterations": 938,
+          "bytes": 69410,
+          "checksum": 61487776,
+          "elapsedNS": 151652333
+        },
+        {
+          "name": "string/emoji/65536",
+          "iterations": 2056,
+          "bytes": 65538,
+          "checksum": 134742016,
+          "elapsedNS": 147930792
+        },
+        {
+          "name": "string/cjk/65536",
+          "iterations": 2191,
+          "bytes": 65540,
+          "checksum": 143593758,
+          "elapsedNS": 149533125
+        },
+        {
+          "name": "string/ascii/65536",
+          "iterations": 4546,
+          "bytes": 65552,
+          "checksum": 297990300,
+          "elapsedNS": 147850792
+        },
+        {
+          "name": "string/sparse-cjk/4096",
+          "iterations": 47588,
+          "bytes": 4098,
+          "checksum": 194920448,
+          "elapsedNS": 148324292
+        },
+        {
+          "name": "string/mixed/4096",
+          "iterations": 14513,
+          "bytes": 4358,
+          "checksum": 59706482,
+          "elapsedNS": 151486375
+        },
+        {
+          "name": "string/emoji/4096",
+          "iterations": 32135,
+          "bytes": 4098,
+          "checksum": 131624960,
+          "elapsedNS": 148061583
+        },
+        {
+          "name": "string/cjk/4096",
+          "iterations": 34021,
+          "bytes": 4127,
+          "checksum": 140336625,
+          "elapsedNS": 148191167
+        },
+        {
+          "name": "string/ascii/4096",
+          "iterations": 68966,
+          "bytes": 4112,
+          "checksum": 283450260,
+          "elapsedNS": 149053792
+        },
+        {
+          "name": "string/sparse-cjk/64",
+          "iterations": 897945,
+          "bytes": 66,
+          "checksum": 57468480,
+          "elapsedNS": 150322334
+        },
+        {
+          "name": "string/mixed/64",
+          "iterations": 479565,
+          "bytes": 74,
+          "checksum": 32610420,
+          "elapsedNS": 145415875
+        },
+        {
+          "name": "string/emoji/64",
+          "iterations": 782055,
+          "bytes": 66,
+          "checksum": 50051520,
+          "elapsedNS": 150765375
+        },
+        {
+          "name": "string/cjk/64",
+          "iterations": 788097,
+          "bytes": 68,
+          "checksum": 52014402,
+          "elapsedNS": 147109417
+        },
+        {
+          "name": "string/ascii/64",
+          "iterations": 879330,
+          "bytes": 92,
+          "checksum": 79139700,
+          "elapsedNS": 145168709
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "variant": "base",
+      "measurements": [
+        {
+          "elapsedNS": 145433125,
+          "checksum": 79139700,
+          "iterations": 879330,
+          "bytes": 92,
+          "name": "string/ascii/64"
+        },
+        {
+          "elapsedNS": 147730750,
+          "checksum": 52014402,
+          "iterations": 788097,
+          "bytes": 68,
+          "name": "string/cjk/64"
+        },
+        {
+          "elapsedNS": 149307667,
+          "checksum": 50051520,
+          "iterations": 782055,
+          "bytes": 66,
+          "name": "string/emoji/64"
+        },
+        {
+          "elapsedNS": 146924208,
+          "checksum": 32610420,
+          "iterations": 479565,
+          "bytes": 74,
+          "name": "string/mixed/64"
+        },
+        {
+          "elapsedNS": 149839667,
+          "checksum": 57468480,
+          "iterations": 897945,
+          "bytes": 66,
+          "name": "string/sparse-cjk/64"
+        },
+        {
+          "bytes": 4112,
+          "name": "string/ascii/4096",
+          "iterations": 68966,
+          "checksum": 283450260,
+          "elapsedNS": 148554584
+        },
+        {
+          "bytes": 4127,
+          "name": "string/cjk/4096",
+          "iterations": 34021,
+          "checksum": 140336625,
+          "elapsedNS": 148350500
+        },
+        {
+          "bytes": 4098,
+          "name": "string/emoji/4096",
+          "iterations": 32135,
+          "checksum": 131624960,
+          "elapsedNS": 147503791
+        },
+        {
+          "bytes": 4358,
+          "name": "string/mixed/4096",
+          "iterations": 14513,
+          "checksum": 59706482,
+          "elapsedNS": 151362292
+        },
+        {
+          "bytes": 4098,
+          "name": "string/sparse-cjk/4096",
+          "iterations": 47588,
+          "checksum": 194920448,
+          "elapsedNS": 150372416
+        },
+        {
+          "bytes": 65552,
+          "name": "string/ascii/65536",
+          "iterations": 4546,
+          "checksum": 297990300,
+          "elapsedNS": 146288917
+        },
+        {
+          "bytes": 65540,
+          "name": "string/cjk/65536",
+          "iterations": 2191,
+          "checksum": 143593758,
+          "elapsedNS": 147705333
+        },
+        {
+          "bytes": 65538,
+          "name": "string/emoji/65536",
+          "iterations": 2056,
+          "checksum": 134742016,
+          "elapsedNS": 146619125
+        },
+        {
+          "bytes": 69410,
+          "name": "string/mixed/65536",
+          "iterations": 938,
+          "checksum": 61487776,
+          "elapsedNS": 153388792
+        },
+        {
+          "bytes": 65538,
+          "name": "string/sparse-cjk/65536",
+          "iterations": 3092,
+          "checksum": 202637312,
+          "elapsedNS": 146689208
+        },
+        {
+          "bytes": 4098,
+          "name": "string/mixed-no-escapes/4096",
+          "iterations": 35361,
+          "checksum": 144838656,
+          "elapsedNS": 155977833
+        },
+        {
+          "bytes": 4106,
+          "name": "string/unicode-escapes/4096",
+          "iterations": 4994,
+          "checksum": 10247688,
+          "elapsedNS": 143907667
+        },
+        {
+          "bytes": 12307,
+          "name": "array/ascii/128x64",
+          "iterations": 5838,
+          "checksum": 69600636,
+          "elapsedNS": 147701167
+        },
+        {
+          "bytes": 9235,
+          "name": "array/cjk/128x64",
+          "iterations": 5287,
+          "checksum": 46789950,
+          "elapsedNS": 153316291
+        },
+        {
+          "bytes": 8979,
+          "name": "array/emoji/128x64",
+          "iterations": 5343,
+          "checksum": 45917742,
+          "elapsedNS": 154152541
+        },
+        {
+          "bytes": 10003,
+          "name": "array/mixed/128x64",
+          "iterations": 3626,
+          "checksum": 33018356,
+          "elapsedNS": 156054875
+        },
+        {
+          "bytes": 65564,
+          "name": "ignored/ascii/65536",
+          "iterations": 4843,
+          "checksum": 4843,
+          "elapsedNS": 149139166
+        },
+        {
+          "bytes": 65552,
+          "name": "ignored/cjk/65536",
+          "iterations": 5025,
+          "checksum": 5025,
+          "elapsedNS": 153476208
+        },
+        {
+          "bytes": 4556,
+          "name": "request/ascii/4096",
+          "iterations": 16089,
+          "checksum": 66334947,
+          "elapsedNS": 151302792
+        },
+        {
+          "bytes": 4316,
+          "name": "response/ascii/4096",
+          "iterations": 20838,
+          "checksum": 85915074,
+          "elapsedNS": 149978209
+        },
+        {
+          "bytes": 4784,
+          "name": "request/mixed/4096",
+          "iterations": 9774,
+          "checksum": 40366620,
+          "elapsedNS": 152592125
+        },
+        {
+          "bytes": 4544,
+          "name": "response/mixed/4096",
+          "iterations": 10986,
+          "checksum": 45372180,
+          "elapsedNS": 148693625
+        },
+        {
+          "bytes": 67980,
+          "name": "request/ascii/65536",
+          "iterations": 1528,
+          "checksum": 100183320,
+          "elapsedNS": 151786333
+        },
+        {
+          "bytes": 67740,
+          "name": "response/ascii/65536",
+          "iterations": 1530,
+          "checksum": 100314450,
+          "elapsedNS": 146798375
+        },
+        {
+          "bytes": 71474,
+          "name": "request/mixed/65536",
+          "iterations": 740,
+          "checksum": 48510700,
+          "elapsedNS": 150097500
+        },
+        {
+          "bytes": 71234,
+          "name": "response/mixed/65536",
+          "iterations": 766,
+          "checksum": 50215130,
+          "elapsedNS": 150316584
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "variant": "pr",
+      "measurements": [
+        {
+          "name": "string/ascii/64",
+          "iterations": 879330,
+          "checksum": 79139700,
+          "bytes": 92,
+          "elapsedNS": 147637167
+        },
+        {
+          "name": "string/cjk/64",
+          "iterations": 788097,
+          "checksum": 52014402,
+          "bytes": 68,
+          "elapsedNS": 142479166
+        },
+        {
+          "name": "string/emoji/64",
+          "iterations": 782055,
+          "checksum": 50051520,
+          "bytes": 66,
+          "elapsedNS": 149485833
+        },
+        {
+          "name": "string/mixed/64",
+          "iterations": 479565,
+          "checksum": 32610420,
+          "bytes": 74,
+          "elapsedNS": 127845042
+        },
+        {
+          "name": "string/sparse-cjk/64",
+          "iterations": 897945,
+          "checksum": 57468480,
+          "bytes": 66,
+          "elapsedNS": 151929875
+        },
+        {
+          "name": "string/ascii/4096",
+          "iterations": 68966,
+          "checksum": 283450260,
+          "bytes": 4112,
+          "elapsedNS": 62108459
+        },
+        {
+          "elapsedNS": 115350625,
+          "bytes": 4127,
+          "name": "string/cjk/4096",
+          "checksum": 140336625,
+          "iterations": 34021
+        },
+        {
+          "elapsedNS": 131748167,
+          "bytes": 4098,
+          "name": "string/emoji/4096",
+          "checksum": 131624960,
+          "iterations": 32135
+        },
+        {
+          "elapsedNS": 117756292,
+          "bytes": 4358,
+          "name": "string/mixed/4096",
+          "checksum": 59706482,
+          "iterations": 14513
+        },
+        {
+          "elapsedNS": 95917834,
+          "bytes": 4098,
+          "name": "string/sparse-cjk/4096",
+          "checksum": 194920448,
+          "iterations": 47588
+        },
+        {
+          "elapsedNS": 57164500,
+          "bytes": 65552,
+          "name": "string/ascii/65536",
+          "checksum": 297990300,
+          "iterations": 4546
+        },
+        {
+          "elapsedNS": 113919500,
+          "bytes": 65540,
+          "name": "string/cjk/65536",
+          "checksum": 143593758,
+          "iterations": 2191
+        },
+        {
+          "elapsedNS": 129804708,
+          "bytes": 65538,
+          "name": "string/emoji/65536",
+          "checksum": 134742016,
+          "iterations": 2056
+        },
+        {
+          "elapsedNS": 117302167,
+          "bytes": 69410,
+          "name": "string/mixed/65536",
+          "checksum": 61487776,
+          "iterations": 938
+        },
+        {
+          "elapsedNS": 107280625,
+          "bytes": 65538,
+          "name": "string/sparse-cjk/65536",
+          "checksum": 202637312,
+          "iterations": 3092
+        },
+        {
+          "elapsedNS": 148749334,
+          "bytes": 4098,
+          "name": "string/mixed-no-escapes/4096",
+          "checksum": 144838656,
+          "iterations": 35361
+        },
+        {
+          "elapsedNS": 55087875,
+          "bytes": 4106,
+          "name": "string/unicode-escapes/4096",
+          "checksum": 10247688,
+          "iterations": 4994
+        },
+        {
+          "elapsedNS": 135020042,
+          "bytes": 12307,
+          "name": "array/ascii/128x64",
+          "checksum": 69600636,
+          "iterations": 5838
+        },
+        {
+          "elapsedNS": 142634125,
+          "bytes": 9235,
+          "name": "array/cjk/128x64",
+          "checksum": 46789950,
+          "iterations": 5287
+        },
+        {
+          "elapsedNS": 151511208,
+          "bytes": 8979,
+          "name": "array/emoji/128x64",
+          "checksum": 45917742,
+          "iterations": 5343
+        },
+        {
+          "elapsedNS": 136519250,
+          "bytes": 10003,
+          "name": "array/mixed/128x64",
+          "checksum": 33018356,
+          "iterations": 3626
+        },
+        {
+          "elapsedNS": 55524459,
+          "bytes": 65564,
+          "name": "ignored/ascii/65536",
+          "checksum": 4843,
+          "iterations": 4843
+        },
+        {
+          "elapsedNS": 74557458,
+          "bytes": 65552,
+          "name": "ignored/cjk/65536",
+          "checksum": 5025,
+          "iterations": 5025
+        },
+        {
+          "elapsedNS": 133613875,
+          "bytes": 4556,
+          "name": "request/ascii/4096",
+          "checksum": 66334947,
+          "iterations": 16089
+        },
+        {
+          "elapsedNS": 128267666,
+          "bytes": 4316,
+          "name": "response/ascii/4096",
+          "checksum": 85915074,
+          "iterations": 20838
+        },
+        {
+          "elapsedNS": 122487959,
+          "bytes": 4784,
+          "name": "request/mixed/4096",
+          "checksum": 40366620,
+          "iterations": 9774
+        },
+        {
+          "elapsedNS": 113753833,
+          "bytes": 4544,
+          "name": "response/mixed/4096",
+          "checksum": 45372180,
+          "iterations": 10986
+        },
+        {
+          "elapsedNS": 123072208,
+          "bytes": 67980,
+          "name": "request/ascii/65536",
+          "checksum": 100183320,
+          "iterations": 1528
+        },
+        {
+          "elapsedNS": 120251208,
+          "bytes": 67740,
+          "name": "response/ascii/65536",
+          "checksum": 100314450,
+          "iterations": 1530
+        },
+        {
+          "elapsedNS": 109686667,
+          "bytes": 71474,
+          "name": "request/mixed/65536",
+          "checksum": 48510700,
+          "iterations": 740
+        },
+        {
+          "elapsedNS": 111021250,
+          "bytes": 71234,
+          "name": "response/mixed/65536",
+          "checksum": 50215130,
+          "iterations": 766
+        }
+      ]
+    }
+  ]
+}

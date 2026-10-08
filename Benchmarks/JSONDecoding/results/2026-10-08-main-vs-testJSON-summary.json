@@ -1,0 +1,281 @@
+[
+  {
+    "name": "string/ascii/64",
+    "bytes": 92,
+    "base_us": 0.16509013567147715,
+    "pr_us": 0.16691586207680847,
+    "regression_percent": 1.1058967259948593,
+    "paired_min_percent": -5.537972261227475,
+    "paired_max_percent": 78.68331206048458
+  },
+  {
+    "name": "string/cjk/64",
+    "bytes": 68,
+    "base_us": 0.18755770799787336,
+    "pr_us": 0.182071073738385,
+    "regression_percent": -2.925304599878442,
+    "paired_min_percent": -6.604797391935257,
+    "paired_max_percent": 0.5515513960824947
+  },
+  {
+    "name": "string/emoji/64",
+    "bytes": 66,
+    "base_us": 0.19091709278759167,
+    "pr_us": 0.1899415642122357,
+    "regression_percent": -0.5109697414266035,
+    "paired_min_percent": -5.76138286592357,
+    "paired_max_percent": 2.3413088105678437
+  },
+  {
+    "name": "string/mixed/64",
+    "bytes": 74,
+    "base_us": 0.3076393898637307,
+    "pr_us": 0.26668204518678384,
+    "regression_percent": -13.313426702311737,
+    "paired_min_percent": -14.651197420667561,
+    "paired_max_percent": -3.562454924539704
+  },
+  {
+    "name": "string/sparse-cjk/64",
+    "bytes": 66,
+    "base_us": 0.16686953766656085,
+    "pr_us": 0.16887508811786914,
+    "regression_percent": 1.2018673266271929,
+    "paired_min_percent": -2.893179678831459,
+    "paired_max_percent": 6.712685820857467
+  },
+  {
+    "name": "string/ascii/4096",
+    "bytes": 4112,
+    "base_us": 2.154026389815271,
+    "pr_us": 0.9020689035176754,
+    "regression_percent": -58.12173389412204,
+    "paired_min_percent": -59.424157470161276,
+    "paired_max_percent": -55.50886835137558
+  },
+  {
+    "name": "string/cjk/4096",
+    "bytes": 4127,
+    "base_us": 4.361485082743012,
+    "pr_us": 3.3891358866582406,
+    "regression_percent": -22.293993390738475,
+    "paired_min_percent": -23.591375891970667,
+    "paired_max_percent": -20.581692969595156
+  },
+  {
+    "name": "string/emoji/4096",
+    "bytes": 4098,
+    "base_us": 4.595053430838649,
+    "pr_us": 4.099834043877392,
+    "regression_percent": -10.777228043480536,
+    "paired_min_percent": -11.240395829078775,
+    "paired_max_percent": -8.541380945496124
+  },
+  {
+    "name": "string/mixed/4096",
+    "bytes": 4358,
+    "base_us": 10.367676152415077,
+    "pr_us": 8.008716323296355,
+    "regression_percent": -22.753023864168632,
+    "paired_min_percent": -25.69102048951094,
+    "paired_max_percent": -20.985726965803785
+  },
+  {
+    "name": "string/sparse-cjk/4096",
+    "bytes": 4098,
+    "base_us": 3.1124854795326553,
+    "pr_us": 2.015588677817937,
+    "regression_percent": -35.24182872266505,
+    "paired_min_percent": -36.21314563436954,
+    "paired_max_percent": -32.849470009185765
+  },
+  {
+    "name": "string/ascii/65536",
+    "bytes": 65552,
+    "base_us": 32.42130444346678,
+    "pr_us": 12.747836999560054,
+    "regression_percent": -60.68067828119461,
+    "paired_min_percent": -61.83478133071607,
+    "paired_max_percent": -59.097506114747176
+  },
+  {
+    "name": "string/cjk/65536",
+    "bytes": 65540,
+    "base_us": 67.4145746234596,
+    "pr_us": 51.921059333637615,
+    "regression_percent": -22.982441669861696,
+    "paired_min_percent": -25.035283653705488,
+    "paired_max_percent": -21.424258112381743
+  },
+  {
+    "name": "string/emoji/65536",
+    "bytes": 65538,
+    "base_us": 71.40475,
+    "pr_us": 63.80556906614786,
+    "regression_percent": -10.64240254864297,
+    "paired_min_percent": -11.63609092455401,
+    "paired_max_percent": -10.180126527111144
+  },
+  {
+    "name": "string/mixed/65536",
+    "bytes": 69410,
+    "base_us": 162.6497430703625,
+    "pr_us": 125.84794776119402,
+    "regression_percent": -22.626408510985453,
+    "paired_min_percent": -23.683407401542876,
+    "paired_max_percent": -21.365398315369145
+  },
+  {
+    "name": "string/sparse-cjk/65536",
+    "bytes": 65538,
+    "base_us": 47.587066300129365,
+    "pr_us": 34.69619178525227,
+    "regression_percent": -27.089029682088327,
+    "paired_min_percent": -27.411116502604006,
+    "paired_max_percent": -23.64902188013073
+  },
+  {
+    "name": "string/mixed-no-escapes/4096",
+    "bytes": 4098,
+    "base_us": 4.2819997172025674,
+    "pr_us": 4.149127343683719,
+    "regression_percent": -3.1030448924376453,
+    "paired_min_percent": -4.781770200655111,
+    "paired_max_percent": -1.2092666653730433
+  },
+  {
+    "name": "string/unicode-escapes/4096",
+    "bytes": 4106,
+    "base_us": 29.128395674809774,
+    "pr_us": 11.14816940328394,
+    "regression_percent": -61.72748568873337,
+    "paired_min_percent": -62.72174785230935,
+    "paired_max_percent": -60.81783878396734
+  },
+  {
+    "name": "array/ascii/128x64",
+    "bytes": 12307,
+    "base_us": 25.53174614594039,
+    "pr_us": 23.224941418293938,
+    "regression_percent": -9.035044898459644,
+    "paired_min_percent": -12.536881188911774,
+    "paired_max_percent": -6.457969178805156
+  },
+  {
+    "name": "array/cjk/128x64",
+    "bytes": 9235,
+    "base_us": 28.77030924910157,
+    "pr_us": 26.88791696614337,
+    "regression_percent": -6.542829507531223,
+    "paired_min_percent": -18.306209683156936,
+    "paired_max_percent": -4.180331257803904
+  },
+  {
+    "name": "array/emoji/128x64",
+    "bytes": 8979,
+    "base_us": 29.194693992139246,
+    "pr_us": 28.462645891821072,
+    "regression_percent": -2.507469681015595,
+    "paired_min_percent": -13.932911404321036,
+    "paired_max_percent": -0.20064622630696638
+  },
+  {
+    "name": "array/mixed/128x64",
+    "bytes": 10003,
+    "base_us": 42.965526751241036,
+    "pr_us": 37.65009652509652,
+    "regression_percent": -12.3713838234067,
+    "paired_min_percent": -12.906970336920098,
+    "paired_max_percent": -9.499035900200903
+  },
+  {
+    "name": "ignored/ascii/65536",
+    "bytes": 65564,
+    "base_us": 30.515365682428246,
+    "pr_us": 11.994235597769977,
+    "regression_percent": -60.694439245482634,
+    "paired_min_percent": -65.10648010599331,
+    "paired_max_percent": -39.1976917470065
+  },
+  {
+    "name": "ignored/cjk/65536",
+    "bytes": 65552,
+    "base_us": 30.533009950248758,
+    "pr_us": 15.023267064676617,
+    "regression_percent": -50.796639148397425,
+    "paired_min_percent": -51.42083651167613,
+    "paired_max_percent": -49.91690509338225
+  },
+  {
+    "name": "request/ascii/4096",
+    "bytes": 4556,
+    "base_us": 9.3061201441979,
+    "pr_us": 8.410484865436013,
+    "regression_percent": -9.624153405329617,
+    "paired_min_percent": -11.691071107266826,
+    "paired_max_percent": -3.6666161838668554
+  },
+  {
+    "name": "response/ascii/4096",
+    "bytes": 4316,
+    "base_us": 7.194138496976676,
+    "pr_us": 6.2051600441501105,
+    "regression_percent": -13.747003247743738,
+    "paired_min_percent": -14.475798280802255,
+    "paired_max_percent": -9.80359535244416
+  },
+  {
+    "name": "request/mixed/4096",
+    "bytes": 4784,
+    "base_us": 15.612044710456312,
+    "pr_us": 12.438595661960303,
+    "regression_percent": -20.326927749384183,
+    "paired_min_percent": -21.82034789456051,
+    "paired_max_percent": -19.728518755473125
+  },
+  {
+    "name": "response/mixed/4096",
+    "bytes": 4544,
+    "base_us": 13.444535408701984,
+    "pr_us": 10.305593482614237,
+    "regression_percent": -23.347343962931333,
+    "paired_min_percent": -24.839325787389765,
+    "paired_max_percent": -22.291135885245883
+  },
+  {
+    "name": "request/ascii/65536",
+    "bytes": 67980,
+    "base_us": 98.49410994764399,
+    "pr_us": 80.43834554973823,
+    "regression_percent": -18.331821473896838,
+    "paired_min_percent": -20.106212030455396,
+    "paired_max_percent": -17.141212156417605
+  },
+  {
+    "name": "response/ascii/65536",
+    "bytes": 67740,
+    "base_us": 95.55375816993464,
+    "pr_us": 78.60923202614379,
+    "regression_percent": -17.732977193483457,
+    "paired_min_percent": -21.83705750645594,
+    "paired_max_percent": -14.259510377971829
+  },
+  {
+    "name": "request/mixed/65536",
+    "bytes": 71474,
+    "base_us": 198.32950405405407,
+    "pr_us": 148.22522567567566,
+    "regression_percent": -25.263149130208408,
+    "paired_min_percent": -27.089605276299878,
+    "paired_max_percent": -23.617743493472155
+  },
+  {
+    "name": "response/mixed/65536",
+    "bytes": 71234,
+    "base_us": 196.27572845953003,
+    "pr_us": 145.5692454308094,
+    "regression_percent": -25.834311469222627,
+    "paired_min_percent": -27.409300279888637,
+    "paired_max_percent": -23.149896209816212
+  }
+]
