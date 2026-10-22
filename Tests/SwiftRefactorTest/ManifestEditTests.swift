@@ -601,6 +601,95 @@ final class ManifestEditTests: XCTestCase {
     )
   }
 
+  func testAddPluginTargetWithBuildToolCapability() throws {
+    try assertManifestRefactor(
+      """
+      // swift-tools-version: 5.5
+      let package = Package(
+          name: "packages"
+      )
+      """,
+      expectedManifest: """
+        // swift-tools-version: 5.5
+        let package = Package(
+            name: "packages",
+            targets: [
+                .plugin(
+                    name: "MyPlugin",
+                    capability: .buildTool
+                ),
+            ]
+        )
+        """,
+      provider: AddPackageTarget.self,
+      context: .init(
+        target: PackageTarget(
+          name: "MyPlugin",
+          type: .plugin,
+          pluginCapability: .buildTool
+        )
+      )
+    )
+  }
+
+  func testAddPluginTargetWithCommandCapability() throws {
+    try assertManifestRefactor(
+      """
+      // swift-tools-version: 5.5
+      let package = Package(
+          name: "packages"
+      )
+      """,
+      expectedManifest: """
+        // swift-tools-version: 5.5
+        let package = Package(
+            name: "packages",
+            targets: [
+                .plugin(
+                    name: "MyPlugin",
+                    capability: .command(intent: .custom(verb: "format", description: "Formats code"))
+                ),
+            ]
+        )
+        """,
+      provider: AddPackageTarget.self,
+      context: .init(
+        target: PackageTarget(
+          name: "MyPlugin",
+          type: .plugin,
+          pluginCapability: .command(verb: "format", description: "Formats code")
+        )
+      )
+    )
+  }
+
+  func testAddPluginTargetWithoutCapability() throws {
+    try assertManifestRefactor(
+      """
+      // swift-tools-version: 5.5
+      let package = Package(
+          name: "packages"
+      )
+      """,
+      expectedManifest: """
+        // swift-tools-version: 5.5
+        let package = Package(
+            name: "packages",
+            targets: [
+                .plugin(name: "MyPlugin"),
+            ]
+        )
+        """,
+      provider: AddPackageTarget.self,
+      context: .init(
+        target: PackageTarget(
+          name: "MyPlugin",
+          type: .plugin
+        )
+      )
+    )
+  }
+
   func testAddTargetDependency() throws {
     try assertManifestRefactor(
       """

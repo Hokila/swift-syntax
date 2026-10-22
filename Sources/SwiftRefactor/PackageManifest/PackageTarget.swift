@@ -38,6 +38,15 @@ public struct PackageTarget {
   /// The usages of package plugins by the target.
   public let pluginUsages: [PluginUsage]?
 
+  /// The capability of the package plugin target.
+  public let pluginCapability: PluginCapability?
+
+  /// Represents the capability of a plugin target.
+  public enum PluginCapability: Sendable {
+    case buildTool
+    case command(verb: String, description: String)
+  }
+
   /// Represents a target's usage of a plugin target or product.
   public enum PluginUsage {
     case plugin(name: String, package: String?)
@@ -76,7 +85,8 @@ public struct PackageTarget {
     path: String? = nil,
     url: String? = nil,
     checksum: String? = nil,
-    pluginUsages: [PluginUsage]? = nil
+    pluginUsages: [PluginUsage]? = nil,
+    pluginCapability: PluginCapability? = nil
   ) {
     self.name = name
     self.type = type
@@ -85,6 +95,7 @@ public struct PackageTarget {
     self.url = url
     self.checksum = checksum
     self.pluginUsages = pluginUsages
+    self.pluginCapability = pluginCapability
   }
 }
 
@@ -105,7 +116,10 @@ extension PackageTarget: ManifestSyntaxRepresentable {
   func asSyntax() -> ExprSyntax {
     var arguments: [LabeledExprSyntax] = []
     arguments.append(label: "name", stringLiteral: name)
-    // FIXME: pluginCapability
+
+    if let pluginCapability {
+      arguments.append(label: "capability", expression: pluginCapability.asSyntax())
+    }
 
     arguments.appendIfNonEmpty(
       label: "dependencies",
@@ -125,6 +139,18 @@ extension PackageTarget: ManifestSyntaxRepresentable {
     let separateParen: String = arguments.count > 1 ? "\n" : ""
     let argumentsSyntax = LabeledExprListSyntax(arguments)
     return ".\(raw: functionName)(\(argumentsSyntax)\(raw: separateParen))"
+  }
+}
+
+extension PackageTarget.PluginCapability: ManifestSyntaxRepresentable {
+  func asSyntax() -> ExprSyntax {
+    switch self {
+    case .buildTool:
+      return ".buildTool"
+
+    case .command(let verb, let description):
+      return ".command(intent: .custom(verb: \(literal: verb), description: \(literal: description)))"
+    }
   }
 }
 
