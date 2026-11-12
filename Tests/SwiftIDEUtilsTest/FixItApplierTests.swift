@@ -243,11 +243,11 @@ class FixItApplierApplyEditsTests: XCTestCase {
 
   func testSubtreeEditInWholeFileCoordinates() {
     let source = """
-    func test() {
-      var x = 1
-      let y = 2
-    }
-    """
+      func test() {
+        var x = 1
+        let y = 2
+      }
+      """
     let file = Parser.parse(source: source)
     let fn = Array(file.statements)[0].item.as(FunctionDeclSyntax.self)!
     let stmt = Array(fn.body!.statements)[1]
@@ -266,19 +266,27 @@ class FixItApplierApplyEditsTests: XCTestCase {
 
   func testSubtreeIgnoresExternalEdits() {
     let source = """
-    func test() {
-      var x = 1
-      let y = 2
-    }
-    """
+      func test() {
+        var x = 1
+        let y = 2
+        var z = 3
+      }
+      """
     let file = Parser.parse(source: source)
     let fn = Array(file.statements)[0].item.as(FunctionDeclSyntax.self)!
     let firstStmt = Array(fn.body!.statements)[0]
     let secondStmt = Array(fn.body!.statements)[1]
+    let thirdStmt = Array(fn.body!.statements)[2]
 
     let xDecl = firstStmt.item.as(VariableDeclSyntax.self)!
-    let editOutside = SourceEdit(
+    let editBefore = SourceEdit(
       range: xDecl.bindingSpecifier.position..<xDecl.bindingSpecifier.endPosition,
+      replacement: "  let "
+    )
+
+    let zDecl = thirdStmt.item.as(VariableDeclSyntax.self)!
+    let editAfter = SourceEdit(
+      range: zDecl.bindingSpecifier.position..<zDecl.bindingSpecifier.endPosition,
       replacement: "  let "
     )
 
@@ -288,9 +296,76 @@ class FixItApplierApplyEditsTests: XCTestCase {
       replacement: "  var "
     )
 
-    // Apply both edits to secondStmt. editOutside must be safely ignored.
-    let result = FixItApplier.apply(edits: [editOutside, editInside], to: secondStmt)
+    // Apply edits before, inside, and after secondStmt. External edits must be ignored.
+    let result = FixItApplier.apply(edits: [editBefore, editInside, editAfter], to: secondStmt)
     XCTAssertEqual(result, "  var y = 2")
+  }
+
+  func testSubtreeIgnoresPartiallyOverlappingEdits() {
+    let source = """
+      func test() {
+        var x = 1
+        let y = 2
+        var z = 3
+      }
+      """
+    let file = Parser.parse(source: source)
+    let fn = Array(file.statements)[0].item.as(FunctionDeclSyntax.self)!
+    let secondStmt = Array(fn.body!.statements)[1]
+
+    let start = secondStmt.position.utf8Offset
+    let end = secondStmt.endPosition.utf8Offset
+
+    let crossingStart = SourceEdit(
+      range: AbsolutePosition(utf8Offset: start - 1)..<AbsolutePosition(utf8Offset: start + 2),
+      replacement: "bad"
+    )
+    let crossingEnd = SourceEdit(
+      range: AbsolutePosition(utf8Offset: end - 2)..<AbsolutePosition(utf8Offset: end + 1),
+      replacement: "bad"
+    )
+    let enclosing = SourceEdit(
+      range: AbsolutePosition(utf8Offset: start - 1)..<AbsolutePosition(utf8Offset: end + 1),
+      replacement: "bad"
+    )
+
+    let result = FixItApplier.apply(
+      edits: [crossingStart, crossingEnd, enclosing],
+      to: secondStmt
+    )
+    XCTAssertEqual(result, "\n  let y = 2")
+  }
+
+  func testSubtreeBoundaryInsertionsAndMultibyteUTF8() {
+    let source = """
+      func test() {
+        // 🎉 註解
+        let y = "文字"
+      }
+      """
+    let file = Parser.parse(source: source)
+    let fn = Array(file.statements)[0].item.as(FunctionDeclSyntax.self)!
+    let stmt = Array(fn.body!.statements)[0]
+    let yDecl = stmt.item.as(VariableDeclSyntax.self)!
+
+    let insertAtStart = SourceEdit(
+      range: stmt.position..<stmt.position,
+      replacement: "/*start*/"
+    )
+    let replaceBinding = SourceEdit(
+      range: yDecl.bindingSpecifier.positionAfterSkippingLeadingTrivia..<yDecl.bindingSpecifier.endPosition,
+      replacement: "var "
+    )
+    let insertAtEnd = SourceEdit(
+      range: stmt.endPosition..<stmt.endPosition,
+      replacement: " // end"
+    )
+
+    let result = FixItApplier.apply(
+      edits: [insertAtStart, replaceBinding, insertAtEnd],
+      to: stmt
+    )
+    XCTAssertEqual(result, "/*start*/\n  // 🎉 註解\n  var y = \"文字\" // end")
   }
 
   func testApplyFixesOnSubtree() {
@@ -305,17 +380,35 @@ class FixItApplierApplyEditsTests: XCTestCase {
     }
 
     let source = """
-    func test() {
-      var x = 1
-      let y = 2
-    }
-    """
+      func test() {
+        var x = 1
+        let y = 2
+      }
+      """
     let file = Parser.parse(source: source)
     let fn = Array(file.statements)[0].item.as(FunctionDeclSyntax.self)!
+    let firstStmt = Array(fn.body!.statements)[0]
+    let xDecl = firstStmt.item.as(VariableDeclSyntax.self)!
     let stmt = Array(fn.body!.statements)[1]
     let yDecl = stmt.item.as(VariableDeclSyntax.self)!
 
-    let diag = Diagnostic(
+    let outsideDiag = Diagnostic(
+      node: Syntax(xDecl.bindingSpecifier),
+      message: TestDiagMessage(message: "change outside"),
+      fixIts: [
+        FixIt(
+          message: TestFixItMessage(message: "change outside"),
+          changes: [
+            .replace(
+              oldNode: Syntax(xDecl.bindingSpecifier),
+              newNode: Syntax(TokenSyntax.keyword(.let, leadingTrivia: .spaces(2), trailingTrivia: .space))
+            )
+          ]
+        )
+      ]
+    )
+
+    let insideDiag = Diagnostic(
       node: Syntax(yDecl.bindingSpecifier),
       message: TestDiagMessage(message: "change to var"),
       fixIts: [
@@ -331,7 +424,7 @@ class FixItApplierApplyEditsTests: XCTestCase {
       ]
     )
 
-    let result = FixItApplier.applyFixes(from: [diag], filterByMessages: nil, to: stmt)
+    let result = FixItApplier.applyFixes(from: [outsideDiag, insideDiag], filterByMessages: nil, to: stmt)
     XCTAssertEqual(result, "  var y = 2")
   }
 }

@@ -89,6 +89,7 @@ swift_syntax_library(
 swift_syntax_test(
     name = "SwiftIDEUtilsTest",
     deps = [
+        ":SwiftDiagnostics",
         ":SwiftIDEUtils",
         ":SwiftParser",
         ":SwiftSyntax",
